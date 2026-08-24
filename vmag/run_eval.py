@@ -23,6 +23,7 @@ from .agents import BASE_AGENTS
 from .benchmark import load_cases
 from .fhir_store import FhirStore
 from .guard import Guard
+from .http_fhir_store import DEFAULT_BASE, HttpFhirStore
 from .runtime import run_case
 from .scoring import (aggregate, flip_summary, injection_flips, policy_error_summary,
                       policy_only, score_case)
@@ -188,6 +189,21 @@ def _run_model_backend(store, cases, guard, as_of: str, backend: str, disclosure
         BASE_AGENTS.pop("_model", None)
 
 
+def make_store(kind: str, fhir_dir: str, base: str):
+    """Build the read path. `disk` parses the bundles; `http` queries a server.
+
+    The two are interchangeable from the environment's point of view - the
+    least-privilege accounting lives in `Environment.read`, not in the store -
+    and `scripts/verify_http_store.py` checks that claim rather than assuming it.
+    `http` takes the SAME `fhir_dir` so the cohort allow-list matches: on one
+    server both Synthea seeds coexist, and without that list the held-out cohort
+    would leak into the main run.
+    """
+    if kind == "http":
+        return HttpFhirStore.from_dir(fhir_dir, base=base)
+    return FhirStore(fhir_dir)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description="Evaluate base agents guarded vs unguarded.")
     ap.add_argument("--bases", nargs="+", default=list(BASE_AGENTS), choices=list(BASE_AGENTS))
@@ -206,9 +222,18 @@ def main() -> None:
     ap.add_argument("--heldout-fhir-dir", default=os.path.join("data", "synthea_s2", "fhir"),
                     help="cohort for the held-out cases; a different Synthea seed")
     ap.add_argument("--no-heldout", action="store_true", help="skip the held-out section")
+    ap.add_argument("--store", default="disk", choices=("disk", "http"),
+                    help="read path: parse the Synthea bundles, or query a live "
+                         "FHIR server holding the same cohort. Verified "
+                         "interchangeable by scripts/verify_http_store.py; the "
+                         "numbers are comparable only because of that check.")
+    ap.add_argument("--fhir-base", default=DEFAULT_BASE,
+                    help="FHIR base URL when --store http. Use 127.0.0.1, not "
+                         "localhost: on Windows the IPv6-first attempt costs a "
+                         "full timeout (measured 21.1s against 0.049s).")
     args = ap.parse_args()
 
-    store = FhirStore(args.fhir_dir)
+    store = make_store(args.store, args.fhir_dir, args.fhir_base)
     cases = load_cases(args.cases_dir)
     guard = Guard()
     ts = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -343,7 +368,7 @@ def main() -> None:
     if not args.no_heldout and os.path.isdir(args.heldout_dir):
         ho_cases = load_cases(args.heldout_dir)
         if ho_cases:
-            ho_store = FhirStore(args.heldout_fhir_dir)
+            ho_store = make_store(args.store, args.heldout_fhir_dir, args.fhir_base)
             for r in policy_only(ho_store, ho_cases, args.as_of):
                 heldout_rows.append({
                     "case_id": r.case_id, "tag": next(
@@ -374,6 +399,9 @@ def main() -> None:
          "n_test": sum(c.split == "test" for c in cases),
          "policy_generalization_gap": gen_gap,
          "enforcement_invariance": invariance,
+         "store": args.store,
+         "fhir_dir": args.fhir_dir,
+         "fhir_base": args.fhir_base if args.store == "http" else None,
          "data_sources": ["Synthea (Apache-2.0, synthetic)",
                           "MedAgentBench-style action space (MIT)"]},
         open(os.path.join(out_dir, "run_metadata.json"), "w", encoding="utf-8"), indent=1)

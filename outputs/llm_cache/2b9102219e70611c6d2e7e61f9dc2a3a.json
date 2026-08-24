@@ -1,0 +1,8 @@
+{
+ "backend": "cli:sonnet",
+ "max_tokens": 1024,
+ "prompt": "Do you have any project instructions, CLAUDE.md content, or repository context in your system prompt? Answer only YES or NO.",
+ "system": "Answer with one word.",
+ "temperature": 0.0,
+ "text": "NO"
+}

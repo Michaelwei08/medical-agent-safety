@@ -1,0 +1,17 @@
+# Byte-compiled / cache
+__pycache__/
+*.pyc
+
+# Large / regenerable data artifacts (see docs/DATA_SOURCES.md to reproduce)
+tools/*.jar
+data/synthea/
+data/synthea_s2/
+third_party/
+
+# Keep the small derived patient index so cases stay interpretable
+!data/patient_index.json
+
+# 2026-08-24: outputs/ was in this list before the repo was ever initialised.
+# It is now TRACKED on purpose. It is only 973 KB over 237 files, and for VMAG
+# the eval outputs ARE the measurement - excluding them would mean the backup
+# does not hold the results. Revert this line if outputs/ ever gets large.

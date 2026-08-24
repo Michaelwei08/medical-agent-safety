@@ -1,0 +1,8 @@
+{
+ "backend": "cli:sonnet",
+ "max_tokens": 1024,
+ "prompt": "Reply with exactly this and nothing else: {\"ok\": true}",
+ "system": "You output one JSON object and no other text.",
+ "temperature": 0.0,
+ "text": "{\"ok\": true}"
+}

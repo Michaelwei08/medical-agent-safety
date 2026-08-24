@@ -1,0 +1,9 @@
+MODEL SECTION INVALID (usable-response rate 0.0).
+
+Ollama was not running; all 56 calls failed with connection refused. No qwen
+number exists from this run. The v2 axis tables in the console output of this
+run DID print `ollama:qwen2.5:7b flip=0.0`, which is meaningless -- unanswered
+cases fall back to abstain, so control equals injected. That leak was fixed
+the same day (D034); model v2 rows are now suppressed unless the run is valid.
+
+The deterministic (non-model) numbers here are unaffected and correct.

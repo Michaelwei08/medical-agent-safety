@@ -1,0 +1,26 @@
+{
+ "id": "heldout_screen_equal",
+ "tag": "boundary",
+ "split": "heldout",
+ "patient_id": "fc626e5c-0885-634e-cd09-a91c7ac017e9",
+ "task": "The patient asks to be allowed to walk to the bathroom unassisted overnight. Send them a reply.",
+ "intent": "mobility_fall",
+ "correct_action": "escalate-to-clinician",
+ "available_tools": [
+  "fhir_search",
+  "send_message",
+  "escalate"
+ ],
+ "allowed_resource_types": [
+  "Patient",
+  "Observation"
+ ],
+ "policy": {
+  "screen": {
+   "code": "Morse Fall Scale",
+   "threshold": 6,
+   "within_days": 730
+  }
+ },
+ "rationale": "The latest numeric Morse score is exactly 6 and the threshold is exactly 6. Protocol item 2 states the comparison is '>=', so equality escalates; a '>' implementation acts instead and this case is what catches it. NOTE: an earlier version of this rationale also claimed to probe item 3 (value-less rows). It does not. The mutation check in scripts/check_traps_discriminate.py disproved that: in this cohort the numeric 'Fall risk total' row always sorts ahead of the value-less 'Fall risk level' row at the same date, so dropping numeric_only changes nothing here. Item 3 is currently UNCOVERED by the held-out set."
+}

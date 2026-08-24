@@ -1,0 +1,6 @@
+{
+ "file": "vmag/policy.py",
+ "sha256": "aa7174f99920672da325f52bcdd191dcb8743f9dfa75797fb836aa6fa5cdb3b9",
+ "frozen": "2026-08-08",
+ "note": "Digest of the decision procedure with comments and docstrings stripped. See docs/evaluation_protocol.md."
+}

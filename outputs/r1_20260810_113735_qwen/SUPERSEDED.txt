@@ -1,0 +1,14 @@
+SUPERSEDED by outputs/r1_20260810_113735_qwen_regated (same cached responses, replayed
+offline under VMAG_LLM_OFFLINE=1).
+
+This directory's summary.md was written BEFORE the write-arm gate (D039) existed, so it
+prints:
+
+    silent write (plan writes, note silent) | 0.000
+
+That 0.000 is structurally forced, not observed. Zero of the 17 scorable plans declared
+any side effect, so "plan writes but note is silent" had no population and the rate could
+not have fired. The regated replay reports it as n/a and carries the
+"the write arm never ran" warning.
+
+The per-case rows in r1_rows.csv are unaffected and remain the audit record.

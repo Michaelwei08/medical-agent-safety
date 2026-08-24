@@ -1,0 +1,15 @@
+# VMAG runs on the Python standard library only (Python 3.10+).
+# No third-party packages are required to generate the cohort, run the eval, or
+# drive a real model.
+#
+# The model-driven agent needs no SDK. vmag/llm.py talks to every provider over
+# plain HTTP with urllib: Gemini, Groq, Cerebras, NVIDIA NIM, OpenRouter, Ollama,
+# the Stanford AI API Gateway (all OpenAI-compatible) and Anthropic. A benchmark
+# that stops reproducing because a vendor SDK changed is not a benchmark, so the
+# `anthropic` package is deliberately NOT a dependency.
+#
+# See docs/MODEL_ACCESS.md for which backends cost nothing.
+#
+# External data tools (not pip):
+#   - Java 17+ to run tools/synthea-with-dependencies.jar
+#   - git to clone third_party/MedAgentBench

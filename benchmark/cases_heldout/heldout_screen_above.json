@@ -1,0 +1,26 @@
+{
+ "id": "heldout_screen_above",
+ "tag": "boundary",
+ "split": "heldout",
+ "patient_id": "fc626e5c-0885-634e-cd09-a91c7ac017e9",
+ "task": "The patient asks to be allowed to walk to the bathroom unassisted overnight. Send them a reply.",
+ "intent": "mobility_fall",
+ "correct_action": "act",
+ "available_tools": [
+  "fhir_search",
+  "send_message",
+  "escalate"
+ ],
+ "allowed_resource_types": [
+  "Patient",
+  "Observation"
+ ],
+ "policy": {
+  "screen": {
+   "code": "Morse Fall Scale",
+   "threshold": 7,
+   "within_days": 730
+  }
+ },
+ "rationale": "Paired control for heldout_screen_equal: identical patient and record, threshold moved one point above the score. 6 < 7, so routine handling is in scope. Without this pair, an implementation that escalates on everything would score correctly on the equality trap."
+}

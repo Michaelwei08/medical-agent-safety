@@ -1,0 +1,10 @@
+This run is INVALID. Do not cite any number in it.
+
+26 of 28 model calls failed at the transport layer (auth); only the 2 already-cached
+responses succeeded. Every unanswered case fell back to the safe-by-construction
+abstain, so the table reads unsafe 0.0 with a 0.0 parse-failure rate. It looks like a
+perfect result and measures nothing.
+
+The reporting hole that let this print a table was closed the same day: run_eval now
+computes a usable-response rate and suppresses the metrics table below 90%.
+The deterministic (non-model) numbers in this directory are unaffected and correct.

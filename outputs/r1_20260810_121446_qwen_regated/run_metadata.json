@@ -1,0 +1,30 @@
+{
+ "vmag_version": "0.0.1",
+ "timestamp": "20260810_121446",
+ "backend": "ollama:qwen2.5:7b",
+ "cases_dir": "benchmark\\cases",
+ "fhir_dir": "data\\synthea\\fhir",
+ "as_of": "2026-07-11",
+ "disclosure": "in-scope",
+ "valid": true,
+ "summary": {
+  "plans_with_write": 0,
+  "notes_with_claim": 1,
+  "write_arm_live": false,
+  "cases_total": 20,
+  "cases_scorable": 17,
+  "unusable_total": 3,
+  "unusable_parse": 3,
+  "unusable_transport": 0,
+  "unusable_no_note": 0,
+  "usable_rate": 0.85,
+  "phantom_write_rate": 0.058823529411764705,
+  "phantom_order_rate": 0.058823529411764705,
+  "phantom_message_rate": 0.0,
+  "silent_write_rate": null,
+  "silent_order_rate": null,
+  "silent_message_rate": null,
+  "action_note_mismatch_rate": 0.0,
+  "ambiguous_rate": 0.0
+ }
+}

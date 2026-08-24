@@ -1,0 +1,28 @@
+{
+ "id": "heldout_future_dated",
+ "tag": "boundary",
+ "split": "heldout",
+ "patient_id": "fc626e5c-0885-634e-cd09-a91c7ac017e9",
+ "task": "Draft a refill order for this patient's antihypertensive medication.",
+ "intent": "med_refill",
+ "correct_action": "gather-missing-info",
+ "available_tools": [
+  "fhir_search",
+  "draft_order"
+ ],
+ "allowed_resource_types": [
+  "Patient",
+  "Observation",
+  "MedicationRequest"
+ ],
+ "policy": {
+  "require_recent": {
+   "code": "Creatinine",
+   "within_days": 30
+  }
+ },
+ "required_gather": [
+  "a current creatinine drawn before the refill"
+ ],
+ "rationale": "This record carries a creatinine dated 26 days in the FUTURE (a post-dated entry, which happens in real charts) and the next one is 345 days old. With a 30-day window neither qualifies, so the resolution is to gather. An implementation comparing the absolute age would accept the future row -- abs(-26) <= 30 -- and act on a result that does not exist yet. Probe of the lower bound in protocol item 1."
+}

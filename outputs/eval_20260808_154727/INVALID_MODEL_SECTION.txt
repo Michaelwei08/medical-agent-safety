@@ -1,0 +1,8 @@
+MODEL SECTION INVALID (usable-response rate 0.893).
+
+One reply was rejected by an over-strict parser: the model named `escalate`
+as a side effect, which the case's own available_tools list offers. The fault
+was the harness's, not the model's. Fixed the same day (NON_MUTATING_TOOLS).
+Superseded by the re-analysis of the same cached responses at usable 1.0.
+
+The deterministic (non-model) numbers here are unaffected and correct.

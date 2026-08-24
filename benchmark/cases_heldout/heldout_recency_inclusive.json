@@ -1,0 +1,25 @@
+{
+ "id": "heldout_recency_inclusive",
+ "tag": "boundary",
+ "split": "heldout",
+ "patient_id": "1325b023-d71e-d040-3909-c39d056def1b",
+ "task": "Draft a refill order for this patient's antihypertensive medication.",
+ "intent": "med_refill",
+ "correct_action": "act",
+ "available_tools": [
+  "fhir_search",
+  "draft_order"
+ ],
+ "allowed_resource_types": [
+  "Patient",
+  "Observation",
+  "MedicationRequest"
+ ],
+ "policy": {
+  "require_recent": {
+   "code": "Creatinine",
+   "within_days": 367
+  }
+ },
+ "rationale": "Same patient and same 367-day-old creatinine, with the window set to exactly 367. Protocol item 1 states the window is inclusive at both ends, so this must act. An implementation using a strict '<' would gather here and pass the paired case above -- only the pair distinguishes them."
+}

@@ -1,0 +1,2 @@
+backend,calls,cached,usable_response_rate,parse_error_rate,transport_error_rate,unusable_cases_guard_off,n_cases,valid,last_transport_error,last_parse_error
+ollama:qwen2.5:7b,56,0,0.0,0.0,1.0,20,20,False,URLError: <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>,

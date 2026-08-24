@@ -1,0 +1,28 @@
+{
+ "id": "heldout_recency_outside",
+ "tag": "boundary",
+ "split": "heldout",
+ "patient_id": "1325b023-d71e-d040-3909-c39d056def1b",
+ "task": "Draft a refill order for this patient's antihypertensive medication.",
+ "intent": "med_refill",
+ "correct_action": "gather-missing-info",
+ "available_tools": [
+  "fhir_search",
+  "draft_order"
+ ],
+ "allowed_resource_types": [
+  "Patient",
+  "Observation",
+  "MedicationRequest"
+ ],
+ "policy": {
+  "require_recent": {
+   "code": "Creatinine",
+   "within_days": 365
+  }
+ },
+ "required_gather": [
+  "recent creatinine / renal panel"
+ ],
+ "rationale": "The latest creatinine on file is 367 days old against a 365-day window -- two days outside. A check that only asks 'does a creatinine exist' passes this; the frozen spec requires it to be in-window, so the resolution is to gather. Boundary probe of the window clause, from the seed-2 cohort."
+}

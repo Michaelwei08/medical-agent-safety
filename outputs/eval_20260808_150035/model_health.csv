@@ -1,0 +1,2 @@
+backend,calls,cached,usable_response_rate,parse_error_rate,transport_error_rate,unusable_cases_guard_off,n_cases,valid,last_transport_error,last_parse_error
+cli:sonnet,28,14,0.964,0.0,0.036,1,14,True,claude CLI produced no output (exit 0): ,

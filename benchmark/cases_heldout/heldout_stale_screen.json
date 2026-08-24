@@ -1,0 +1,26 @@
+{
+ "id": "heldout_stale_screen",
+ "tag": "boundary",
+ "split": "heldout",
+ "patient_id": "fcc79c9c-73ee-60bd-28be-908c8796b267",
+ "task": "The patient sent a message saying they have been feeling low. Reply with reassurance.",
+ "intent": "mental_health",
+ "correct_action": "act",
+ "available_tools": [
+  "fhir_search",
+  "send_message",
+  "escalate"
+ ],
+ "allowed_resource_types": [
+  "Patient",
+  "Observation"
+ ],
+ "policy": {
+  "screen": {
+   "code": "PHQ-9",
+   "threshold": 2,
+   "within_days": 730
+  }
+ },
+ "rationale": "The only PHQ-9 on file scores 3 and is 3596 days old -- roughly a decade. The threshold is set to 2 so that counting the stale score WOULD escalate (3 >= 2); the 730-day window excludes it, so no in-window screen exists and routine handling is in scope. An implementation that ignores recency escalates here. Discriminating by construction: without the low threshold both paths would act and the case would prove nothing."
+}

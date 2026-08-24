@@ -1,0 +1,2169 @@
+[
+ {
+  "id": "352cccfc-0946-b8f0-a793-a1897e7f48b6",
+  "mrn": "352cccfc-0946-b8f0-a793-a1897e7f48b6",
+  "name": "Abdul218 Leif534 Schoen8",
+  "gender": "male",
+  "birthDate": "2000-06-14",
+  "source_file": "Abdul218_Schoen8_352cccfc-0946-b8f0-a793-a1897e7f48b6.json",
+  "n_conditions": 32,
+  "n_medications": 27,
+  "conditions": [
+   "Anemia (disorder)",
+   "Asthma (disorder)",
+   "Atopic dermatitis (disorder)",
+   "Child attention deficit disorder (disorder)",
+   "Childhood asthma (disorder)",
+   "Full-time employment (finding)",
+   "Gingivitis (disorder)",
+   "Limited social contact (finding)",
+   "Medication review due (situation)",
+   "Not in labor force (finding)",
+   "Part-time employment (finding)",
+   "Prediabetes (finding)",
+   "Primary dental caries (disorder)",
+   "Received higher education (finding)",
+   "Seasonal allergic rhinitis (disorder)",
+   "Severe anxiety (panic) (finding)",
+   "Streptococcal sore throat (disorder)",
+   "Stress (finding)",
+   "Unhealthy alcohol drinking behavior (finding)",
+   "Viral sinusitis (disorder)"
+  ],
+  "medications": [
+   "120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]",
+   "Loratadine 5 MG Chewable Tablet",
+   "NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",
+   "Penicillin V Potassium 500 MG Oral Tablet",
+   "albuterol 0.83 MG/ML Inhalation Solution"
+  ],
+  "recent_observations": [
+   {
+    "code": "Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]",
+    "date": "2025-11-12T21:05:00-08:00",
+    "value": "15 {score}"
+   },
+   {
+    "code": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+    "date": "2025-11-12T20:43:57-08:00",
+    "value": "6 {score}"
+   },
+   {
+    "code": "Total score [HARK]",
+    "date": "2025-11-12T20:04:16-08:00",
+    "value": "0 {score}"
+   },
+   {
+    "code": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
+    "date": "2025-11-12T19:26:32-08:00",
+    "value": null
+   },
+   {
+    "code": "Hemoglobin A1c/Hemoglobin.total in Blood",
+    "date": "2025-11-12T18:38:47-08:00",
+    "value": "6.21 %"
+   },
+   {
+    "code": "Body Height",
+    "date": "2025-11-12T18:38:47-08:00",
+    "value": "177.6 cm"
+   },
+   {
+    "code": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+    "date": "2025-11-12T18:38:47-08:00",
+    "value": "1 {score}"
+   },
+   {
+    "code": "Body Weight",
+    "date": "2025-11-12T18:38:47-08:00",
+    "value": "80.8 kg"
+   },
+   {
+    "code": "Body mass index (BMI) [Ratio]",
+    "date": "2025-11-12T18:38:47-08:00",
+    "value": "25.62 kg/m2"
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2025-11-12T18:38:47-08:00",
+    "value": null
+   },
+   {
+    "code": "Heart rate",
+    "date": "2025-11-12T18:38:47-08:00",
+    "value": "72 /min"
+   },
+   {
+    "code": "Respiratory rate",
+    "date": "2025-11-12T18:38:47-08:00",
+    "value": "14 /min"
+   },
+   {
+    "code": "Glucose [Mass/volume] in Blood",
+    "date": "2025-11-12T18:38:47-08:00",
+    "value": "65.33 mg/dL"
+   },
+   {
+    "code": "Urea nitrogen [Mass/volume] in Blood",
+    "date": "2025-11-12T18:38:47-08:00",
+    "value": "9.68 mg/dL"
+   },
+   {
+    "code": "Creatinine [Mass/volume] in Blood",
+    "date": "2025-11-12T18:38:47-08:00",
+    "value": "1.29 mg/dL"
+   },
+   {
+    "code": "Calcium [Mass/volume] in Blood",
+    "date": "2025-11-12T18:38:47-08:00",
+    "value": "10.11 mg/dL"
+   },
+   {
+    "code": "Sodium [Moles/volume] in Blood",
+    "date": "2025-11-12T18:38:47-08:00",
+    "value": "136.4 mmol/L"
+   },
+   {
+    "code": "Potassium [Moles/volume] in Blood",
+    "date": "2025-11-12T18:38:47-08:00",
+    "value": "3.75 mmol/L"
+   },
+   {
+    "code": "Chloride [Moles/volume] in Blood",
+    "date": "2025-11-12T18:38:47-08:00",
+    "value": "106.03 mmol/L"
+   },
+   {
+    "code": "Carbon dioxide, total [Moles/volume] in Blood",
+    "date": "2025-11-12T18:38:47-08:00",
+    "value": "25.71 mmol/L"
+   },
+   {
+    "code": "Tobacco smoking status",
+    "date": "2025-11-12T18:38:47-08:00",
+    "value": null
+   },
+   {
+    "code": "Body temperature",
+    "date": "2025-11-04T02:38:47-08:00",
+    "value": "37.575 Cel"
+   },
+   {
+    "code": "Hemoglobin [Mass/volume] in Blood",
+    "date": "2025-09-24T19:38:47-07:00",
+    "value": "10.705 g/dL"
+   },
+   {
+    "code": "Hematocrit [Volume Fraction] of Blood by calculation",
+    "date": "2025-09-24T19:38:47-07:00",
+    "value": "31.534 %"
+   },
+   {
+    "code": "Leukocytes [#/volume] in Blood by Automated count",
+    "date": "2025-09-24T19:38:47-07:00",
+    "value": "7.2266 10*3/uL"
+   }
+  ]
+ },
+ {
+  "id": "68fb0e6f-684d-f992-6252-ef78e4423081",
+  "mrn": "68fb0e6f-684d-f992-6252-ef78e4423081",
+  "name": "Benjamin360 Cyrus914 Littel644",
+  "gender": "male",
+  "birthDate": "1994-08-07",
+  "source_file": "Benjamin360_Littel644_68fb0e6f-684d-f992-6252-ef78e4423081.json",
+  "n_conditions": 20,
+  "n_medications": 5,
+  "conditions": [
+   "Acute bronchitis (disorder)",
+   "Educated to high school level (finding)",
+   "Essential hypertension (disorder)",
+   "Full-time employment (finding)",
+   "Gingival disease (disorder)",
+   "Gingivitis (disorder)",
+   "Limited social contact (finding)",
+   "Medication review due (situation)",
+   "Not in labor force (finding)",
+   "Social isolation (finding)",
+   "Stress (finding)",
+   "Victim of intimate partner abuse (finding)",
+   "Viral sinusitis (disorder)"
+  ],
+  "medications": [
+   "Acetaminophen 21.7 MG/ML / Dextromethorphan Hydrobromide 1 MG/ML / doxylamine succinate 0.417 MG/ML Oral Solution",
+   "Acetaminophen 325 MG Oral Tablet",
+   "amLODIPine 2.5 MG Oral Tablet",
+   "lisinopril 10 MG Oral Tablet"
+  ],
+  "recent_observations": [
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-06-30T12:50:44-07:00",
+    "value": null
+   },
+   {
+    "code": "Total score [AUDIT-C]",
+    "date": "2026-05-31T14:30:00-07:00",
+    "value": "1 {score}"
+   },
+   {
+    "code": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
+    "date": "2026-05-31T13:48:05-07:00",
+    "value": null
+   },
+   {
+    "code": "Body Height",
+    "date": "2026-05-31T12:50:44-07:00",
+    "value": "188.5 cm"
+   },
+   {
+    "code": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+    "date": "2026-05-31T12:50:44-07:00",
+    "value": "0 {score}"
+   },
+   {
+    "code": "Body Weight",
+    "date": "2026-05-31T12:50:44-07:00",
+    "value": "88.2 kg"
+   },
+   {
+    "code": "Body mass index (BMI) [Ratio]",
+    "date": "2026-05-31T12:50:44-07:00",
+    "value": "24.83 kg/m2"
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-05-31T12:50:44-07:00",
+    "value": null
+   },
+   {
+    "code": "Heart rate",
+    "date": "2026-05-31T12:50:44-07:00",
+    "value": "63 /min"
+   },
+   {
+    "code": "Respiratory rate",
+    "date": "2026-05-31T12:50:44-07:00",
+    "value": "13 /min"
+   },
+   {
+    "code": "Tobacco smoking status",
+    "date": "2026-05-31T12:50:44-07:00",
+    "value": null
+   },
+   {
+    "code": "Total score [DAST-10]",
+    "date": "2025-04-06T15:22:38-07:00",
+    "value": "2 {score}"
+   },
+   {
+    "code": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+    "date": "2025-04-06T14:47:07-07:00",
+    "value": "1 {score}"
+   },
+   {
+    "code": "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]",
+    "date": "2025-04-06T14:08:05-07:00",
+    "value": "12 {score}"
+   },
+   {
+    "code": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
+    "date": "2025-04-06T13:48:27-07:00",
+    "value": null
+   },
+   {
+    "code": "Body Height",
+    "date": "2025-04-06T12:50:44-07:00",
+    "value": "188.5 cm"
+   },
+   {
+    "code": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+    "date": "2025-04-06T12:50:44-07:00",
+    "value": "3 {score}"
+   },
+   {
+    "code": "Body Weight",
+    "date": "2025-04-06T12:50:44-07:00",
+    "value": "87 kg"
+   },
+   {
+    "code": "Body mass index (BMI) [Ratio]",
+    "date": "2025-04-06T12:50:44-07:00",
+    "value": "24.48 kg/m2"
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2025-04-06T12:50:44-07:00",
+    "value": null
+   },
+   {
+    "code": "Heart rate",
+    "date": "2025-04-06T12:50:44-07:00",
+    "value": "69 /min"
+   },
+   {
+    "code": "Respiratory rate",
+    "date": "2025-04-06T12:50:44-07:00",
+    "value": "16 /min"
+   },
+   {
+    "code": "Cholesterol [Mass/volume] in Serum or Plasma",
+    "date": "2025-04-06T12:50:44-07:00",
+    "value": "186.61 mg/dL"
+   },
+   {
+    "code": "Triglyceride [Mass/volume] in Serum or Plasma",
+    "date": "2025-04-06T12:50:44-07:00",
+    "value": "126.08 mg/dL"
+   },
+   {
+    "code": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay",
+    "date": "2025-04-06T12:50:44-07:00",
+    "value": "134.78 mg/dL"
+   }
+  ]
+ },
+ {
+  "id": "0190e572-2719-b812-dabf-dec7929a3269",
+  "mrn": "0190e572-2719-b812-dabf-dec7929a3269",
+  "name": "Dong972 Virgil85 Morissette863",
+  "gender": "male",
+  "birthDate": "2002-10-02",
+  "source_file": "Dong972_Morissette863_0190e572-2719-b812-dabf-dec7929a3269.json",
+  "n_conditions": 16,
+  "n_medications": 1,
+  "conditions": [
+   "Acute bronchitis (disorder)",
+   "Acute viral pharyngitis (disorder)",
+   "Gingivitis (disorder)",
+   "Limited social contact (finding)",
+   "Medication review due (situation)",
+   "Only received primary school education (finding)",
+   "Part-time employment (finding)",
+   "Reports of violence in the environment (finding)",
+   "Risk activity involvement (finding)",
+   "Stress (finding)",
+   "Unemployed (finding)"
+  ],
+  "medications": [
+   "Acetaminophen 21.7 MG/ML / Dextromethorphan Hydrobromide 1 MG/ML / doxylamine succinate 0.417 MG/ML Oral Solution"
+  ],
+  "recent_observations": [
+   {
+    "code": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+    "date": "2024-12-04T23:00:32-08:00",
+    "value": "0 {score}"
+   },
+   {
+    "code": "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]",
+    "date": "2024-12-04T22:20:40-08:00",
+    "value": "1 {score}"
+   },
+   {
+    "code": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
+    "date": "2024-12-04T21:57:25-08:00",
+    "value": null
+   },
+   {
+    "code": "Body Height",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": "169.7 cm"
+   },
+   {
+    "code": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": "2 {score}"
+   },
+   {
+    "code": "Body Weight",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": "62.6 kg"
+   },
+   {
+    "code": "Body mass index (BMI) [Ratio]",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": "21.74 kg/m2"
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": null
+   },
+   {
+    "code": "Heart rate",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": "81 /min"
+   },
+   {
+    "code": "Respiratory rate",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": "13 /min"
+   },
+   {
+    "code": "Leukocytes [#/volume] in Blood by Automated count",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": "6.7651 10*3/uL"
+   },
+   {
+    "code": "Erythrocytes [#/volume] in Blood by Automated count",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": "4.4588 10*6/uL"
+   },
+   {
+    "code": "Hemoglobin [Mass/volume] in Blood",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": "15.885 g/dL"
+   },
+   {
+    "code": "Hematocrit [Volume Fraction] of Blood by Automated count",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": "38.755 %"
+   },
+   {
+    "code": "MCV [Entitic mean volume] in Red Blood Cells by Automated count",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": "94.481 fL"
+   },
+   {
+    "code": "MCH [Entitic mass] by Automated count",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": "30.882 pg"
+   },
+   {
+    "code": "MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": "34.26 g/dL"
+   },
+   {
+    "code": "Erythrocyte [DistWidth] in Blood by Automated count",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": "45.266 fL"
+   },
+   {
+    "code": "Platelets [#/volume] in Blood by Automated count",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": "312.76 10*3/uL"
+   },
+   {
+    "code": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": "15.385 fL"
+   },
+   {
+    "code": "Platelet [Entitic mean volume] in Blood by Automated count",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": "10.625 fL"
+   },
+   {
+    "code": "Tobacco smoking status",
+    "date": "2024-12-04T21:23:33-08:00",
+    "value": null
+   },
+   {
+    "code": "Total score [AUDIT-C]",
+    "date": "2021-12-02T00:04:06-08:00",
+    "value": "1 {score}"
+   },
+   {
+    "code": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+    "date": "2021-12-01T23:28:41-08:00",
+    "value": "2 {score}"
+   },
+   {
+    "code": "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]",
+    "date": "2021-12-01T22:44:55-08:00",
+    "value": "3 {score}"
+   }
+  ]
+ },
+ {
+  "id": "f7bed9d4-b5f3-0868-c07a-6f3ba008257b",
+  "mrn": "f7bed9d4-b5f3-0868-c07a-6f3ba008257b",
+  "name": "Felisha640 Tonja658 Fay398",
+  "gender": "female",
+  "birthDate": "1970-06-17",
+  "source_file": "Felisha640_Tonja658_Fay398_f7bed9d4-b5f3-0868-c07a-6f3ba008257b.json",
+  "n_conditions": 35,
+  "n_medications": 23,
+  "conditions": [
+   "Body mass index 30+ - obesity (finding)",
+   "Chronic low back pain (finding)",
+   "Chronic neck pain (finding)",
+   "Chronic pain (finding)",
+   "Essential hypertension (disorder)",
+   "Full-time employment (finding)",
+   "Gingivitis (disorder)",
+   "Has a criminal record (finding)",
+   "History of tubal ligation (situation)",
+   "Housing unsatisfactory (finding)",
+   "Infection of tooth (disorder)",
+   "Loss of teeth (disorder)",
+   "Medication review due (situation)",
+   "Not in labor force (finding)",
+   "Obstructive sleep apnea syndrome (disorder)",
+   "Osteoarthritis of knee (disorder)",
+   "Part-time employment (finding)",
+   "Primary dental caries (disorder)",
+   "Received higher education (finding)",
+   "Sinusitis (disorder)",
+   "Sleep disorder (disorder)",
+   "Stress (finding)"
+  ],
+  "medications": [
+   "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet",
+   "Naproxen sodium 220 MG Oral Tablet",
+   "amLODIPine 2.5 MG Oral Tablet"
+  ],
+  "recent_observations": [
+   {
+    "code": "Total score [DAST-10]",
+    "date": "2026-01-14T14:12:48-08:00",
+    "value": "1 {score}"
+   },
+   {
+    "code": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+    "date": "2026-01-14T13:33:49-08:00",
+    "value": "1 {score}"
+   },
+   {
+    "code": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
+    "date": "2026-01-14T12:52:11-08:00",
+    "value": null
+   },
+   {
+    "code": "Body Height",
+    "date": "2026-01-14T12:03:37-08:00",
+    "value": "167.7 cm"
+   },
+   {
+    "code": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+    "date": "2026-01-14T12:03:37-08:00",
+    "value": "4 {score}"
+   },
+   {
+    "code": "Body Weight",
+    "date": "2026-01-14T12:03:37-08:00",
+    "value": "78.4 kg"
+   },
+   {
+    "code": "Body mass index (BMI) [Ratio]",
+    "date": "2026-01-14T12:03:37-08:00",
+    "value": "27.88 kg/m2"
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-01-14T12:03:37-08:00",
+    "value": null
+   },
+   {
+    "code": "Heart rate",
+    "date": "2026-01-14T12:03:37-08:00",
+    "value": "88 /min"
+   },
+   {
+    "code": "Respiratory rate",
+    "date": "2026-01-14T12:03:37-08:00",
+    "value": "14 /min"
+   },
+   {
+    "code": "Cholesterol [Mass/volume] in Serum or Plasma",
+    "date": "2026-01-14T12:03:37-08:00",
+    "value": "202.57 mg/dL"
+   },
+   {
+    "code": "Triglyceride [Mass/volume] in Serum or Plasma",
+    "date": "2026-01-14T12:03:37-08:00",
+    "value": "144.74 mg/dL"
+   },
+   {
+    "code": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay",
+    "date": "2026-01-14T12:03:37-08:00",
+    "value": "128.65 mg/dL"
+   },
+   {
+    "code": "Cholesterol in HDL [Mass/volume] in Serum or Plasma",
+    "date": "2026-01-14T12:03:37-08:00",
+    "value": "44.98 mg/dL"
+   },
+   {
+    "code": "Tobacco smoking status",
+    "date": "2026-01-14T12:03:37-08:00",
+    "value": null
+   },
+   {
+    "code": "Total score [DAST-10]",
+    "date": "2025-01-08T15:14:43-08:00",
+    "value": "2 {score}"
+   },
+   {
+    "code": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+    "date": "2025-01-08T14:35:20-08:00",
+    "value": "1 {score}"
+   },
+   {
+    "code": "Total score [HARK]",
+    "date": "2025-01-08T13:52:40-08:00",
+    "value": "0 {score}"
+   },
+   {
+    "code": "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]",
+    "date": "2025-01-08T13:15:14-08:00",
+    "value": "0 {score}"
+   },
+   {
+    "code": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
+    "date": "2025-01-08T12:47:33-08:00",
+    "value": null
+   },
+   {
+    "code": "Body Height",
+    "date": "2025-01-08T12:03:37-08:00",
+    "value": "167.7 cm"
+   },
+   {
+    "code": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+    "date": "2025-01-08T12:03:37-08:00",
+    "value": "2 {score}"
+   },
+   {
+    "code": "Body Weight",
+    "date": "2025-01-08T12:03:37-08:00",
+    "value": "78.4 kg"
+   },
+   {
+    "code": "Body mass index (BMI) [Ratio]",
+    "date": "2025-01-08T12:03:37-08:00",
+    "value": "27.88 kg/m2"
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2025-01-08T12:03:37-08:00",
+    "value": null
+   }
+  ]
+ },
+ {
+  "id": "58f6f13d-28ca-7a36-78a7-ab19bdd02238",
+  "mrn": "58f6f13d-28ca-7a36-78a7-ab19bdd02238",
+  "name": "Franklyn361 Britt177 Wyman904",
+  "gender": "male",
+  "birthDate": "2004-07-18",
+  "source_file": "Franklyn361_Wyman904_58f6f13d-28ca-7a36-78a7-ab19bdd02238.json",
+  "n_conditions": 27,
+  "n_medications": 33,
+  "conditions": [
+   "Acute viral pharyngitis (disorder)",
+   "Asthma (disorder)",
+   "Childhood asthma (disorder)",
+   "Chronic sinusitis (disorder)",
+   "Concussion injury of brain (disorder)",
+   "Concussion with no loss of consciousness (disorder)",
+   "Educated to high school level (finding)",
+   "Full-time employment (finding)",
+   "Gingival disease (disorder)",
+   "Gingivitis (disorder)",
+   "Medication review due (situation)",
+   "Not in labor force (finding)",
+   "Perennial allergic rhinitis (disorder)",
+   "Primary dental caries (disorder)",
+   "Risk activity involvement (finding)",
+   "Stress (finding)",
+   "Viral sinusitis (disorder)"
+  ],
+  "medications": [
+   "120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]",
+   "Amoxicillin 250 MG / Clavulanate 125 MG Oral Tablet",
+   "Fexofenadine hydrochloride 30 MG Oral Tablet",
+   "NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",
+   "albuterol 0.83 MG/ML Inhalation Solution"
+  ],
+  "recent_observations": [
+   {
+    "code": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
+    "date": "2025-10-12T22:09:37-07:00",
+    "value": null
+   },
+   {
+    "code": "Body Height",
+    "date": "2025-10-12T21:15:43-07:00",
+    "value": "168.4 cm"
+   },
+   {
+    "code": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+    "date": "2025-10-12T21:15:43-07:00",
+    "value": "1 {score}"
+   },
+   {
+    "code": "Body Weight",
+    "date": "2025-10-12T21:15:43-07:00",
+    "value": "51.2 kg"
+   },
+   {
+    "code": "Body mass index (BMI) [Ratio]",
+    "date": "2025-10-12T21:15:43-07:00",
+    "value": "18.07 kg/m2"
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2025-10-12T21:15:43-07:00",
+    "value": null
+   },
+   {
+    "code": "Heart rate",
+    "date": "2025-10-12T21:15:43-07:00",
+    "value": "97 /min"
+   },
+   {
+    "code": "Respiratory rate",
+    "date": "2025-10-12T21:15:43-07:00",
+    "value": "15 /min"
+   },
+   {
+    "code": "Tobacco smoking status",
+    "date": "2025-10-12T21:15:43-07:00",
+    "value": null
+   },
+   {
+    "code": "Total score [DAST-10]",
+    "date": "2024-10-06T23:11:00-07:00",
+    "value": "1 {score}"
+   },
+   {
+    "code": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+    "date": "2024-10-06T22:33:29-07:00",
+    "value": "0 {score}"
+   },
+   {
+    "code": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
+    "date": "2024-10-06T21:55:54-07:00",
+    "value": null
+   },
+   {
+    "code": "Body Height",
+    "date": "2024-10-06T21:15:43-07:00",
+    "value": "168.4 cm"
+   },
+   {
+    "code": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+    "date": "2024-10-06T21:15:43-07:00",
+    "value": "4 {score}"
+   },
+   {
+    "code": "Body Weight",
+    "date": "2024-10-06T21:15:43-07:00",
+    "value": "49.6 kg"
+   },
+   {
+    "code": "Body mass index (BMI) [Ratio]",
+    "date": "2024-10-06T21:15:43-07:00",
+    "value": "17.5 kg/m2"
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2024-10-06T21:15:43-07:00",
+    "value": null
+   },
+   {
+    "code": "Heart rate",
+    "date": "2024-10-06T21:15:43-07:00",
+    "value": "93 /min"
+   },
+   {
+    "code": "Respiratory rate",
+    "date": "2024-10-06T21:15:43-07:00",
+    "value": "16 /min"
+   },
+   {
+    "code": "Leukocytes [#/volume] in Blood by Automated count",
+    "date": "2024-10-06T21:15:43-07:00",
+    "value": "8.6949 10*3/uL"
+   },
+   {
+    "code": "Erythrocytes [#/volume] in Blood by Automated count",
+    "date": "2024-10-06T21:15:43-07:00",
+    "value": "4.9496 10*6/uL"
+   },
+   {
+    "code": "Hemoglobin [Mass/volume] in Blood",
+    "date": "2024-10-06T21:15:43-07:00",
+    "value": "17.35 g/dL"
+   },
+   {
+    "code": "Hematocrit [Volume Fraction] of Blood by Automated count",
+    "date": "2024-10-06T21:15:43-07:00",
+    "value": "44.633 %"
+   },
+   {
+    "code": "MCV [Entitic mean volume] in Red Blood Cells by Automated count",
+    "date": "2024-10-06T21:15:43-07:00",
+    "value": "94.252 fL"
+   },
+   {
+    "code": "MCH [Entitic mass] by Automated count",
+    "date": "2024-10-06T21:15:43-07:00",
+    "value": "28.297 pg"
+   }
+  ]
+ },
+ {
+  "id": "f27b5db0-e934-0cfc-a71c-549bc5fe80b5",
+  "mrn": "f27b5db0-e934-0cfc-a71c-549bc5fe80b5",
+  "name": "Hsiu839 O'Keefe54",
+  "gender": "female",
+  "birthDate": "2007-06-13",
+  "source_file": "Hsiu839_O'Keefe54_f27b5db0-e934-0cfc-a71c-549bc5fe80b5.json",
+  "n_conditions": 20,
+  "n_medications": 3,
+  "conditions": [
+   "Chronic neck pain (finding)",
+   "Chronic pain (finding)",
+   "Cough (finding)",
+   "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)",
+   "Fever (finding)",
+   "Headache (finding)",
+   "Joint pain",
+   "Medication review due (situation)",
+   "Muscle pain (finding)",
+   "Not in labor force (finding)",
+   "Received higher education (finding)",
+   "Risk activity involvement (finding)",
+   "Sore throat (finding)",
+   "Sputum finding (finding)",
+   "Stress (finding)",
+   "Suspected disease caused by Severe acute respiratory coronavirus 2 (situation)"
+  ],
+  "medications": [
+   "Acetaminophen 325 MG Oral Tablet [Tylenol]",
+   "{7 (ethinyl estradiol 0.01 MG Oral Tablet) / 84 (ethinyl estradiol 0.03 MG / levonorgestrel 0.15 MG Oral Tablet) } Pack [Seasonique]"
+  ],
+  "recent_observations": [
+   {
+    "code": "Pain severity - Reported",
+    "date": "2025-08-31T18:55:37-07:00",
+    "value": "3.485 {score}"
+   },
+   {
+    "code": "Pain severity - Reported",
+    "date": "2025-08-28T18:00:27-07:00",
+    "value": "6.7702 {score}"
+   },
+   {
+    "code": "Pain severity - Reported",
+    "date": "2025-08-25T17:13:23-07:00",
+    "value": "1.2548 {score}"
+   },
+   {
+    "code": "Pain severity - Reported",
+    "date": "2025-08-22T16:16:12-07:00",
+    "value": "7.2958 {score}"
+   },
+   {
+    "code": "Pain severity - Reported",
+    "date": "2025-08-19T15:24:49-07:00",
+    "value": "4.7443 {score}"
+   },
+   {
+    "code": "Pain severity - Reported",
+    "date": "2025-08-16T14:35:19-07:00",
+    "value": "2.4994 {score}"
+   },
+   {
+    "code": "Pain severity - Reported",
+    "date": "2025-08-13T13:39:24-07:00",
+    "value": "5.0302 {score}"
+   },
+   {
+    "code": "Total score [DAST-10]",
+    "date": "2025-08-06T15:00:54-07:00",
+    "value": "2 {score}"
+   },
+   {
+    "code": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+    "date": "2025-08-06T14:20:13-07:00",
+    "value": "1 {score}"
+   },
+   {
+    "code": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
+    "date": "2025-08-06T13:42:56-07:00",
+    "value": null
+   },
+   {
+    "code": "Body Height",
+    "date": "2025-08-06T12:50:36-07:00",
+    "value": "156.1 cm"
+   },
+   {
+    "code": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+    "date": "2025-08-06T12:50:36-07:00",
+    "value": "3 {score}"
+   },
+   {
+    "code": "Body Weight",
+    "date": "2025-08-06T12:50:36-07:00",
+    "value": "52.6 kg"
+   },
+   {
+    "code": "Body mass index (BMI) [Ratio]",
+    "date": "2025-08-06T12:50:36-07:00",
+    "value": "21.58 kg/m2"
+   },
+   {
+    "code": "Body mass index (BMI) [Percentile] Per age and sex",
+    "date": "2025-08-06T12:50:36-07:00",
+    "value": "53.473 %"
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2025-08-06T12:50:36-07:00",
+    "value": null
+   },
+   {
+    "code": "Heart rate",
+    "date": "2025-08-06T12:50:36-07:00",
+    "value": "99 /min"
+   },
+   {
+    "code": "Respiratory rate",
+    "date": "2025-08-06T12:50:36-07:00",
+    "value": "16 /min"
+   },
+   {
+    "code": "Tobacco smoking status",
+    "date": "2025-08-06T12:50:36-07:00",
+    "value": null
+   },
+   {
+    "code": "Pain severity - Reported",
+    "date": "2025-07-27T15:19:55-07:00",
+    "value": "9.7911 {score}"
+   },
+   {
+    "code": "Pain severity - Reported",
+    "date": "2025-07-24T14:32:57-07:00",
+    "value": "2.7994 {score}"
+   },
+   {
+    "code": "Pain severity - Reported",
+    "date": "2025-07-21T13:43:00-07:00",
+    "value": "8.6604 {score}"
+   },
+   {
+    "code": "Pain intensity, Enjoyment of life, General activity scale [PEG]",
+    "date": "2025-07-18T12:50:36-07:00",
+    "value": null
+   },
+   {
+    "code": "Drugs of abuse 5 panel - Urine by Screen method",
+    "date": "2025-07-18T12:50:36-07:00",
+    "value": null
+   },
+   {
+    "code": "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]",
+    "date": "2024-07-31T13:08:20-07:00",
+    "value": "1 {score}"
+   }
+  ]
+ },
+ {
+  "id": "552cf1e4-a8ab-85dd-a08c-883fbdbd7d0b",
+  "mrn": "552cf1e4-a8ab-85dd-a08c-883fbdbd7d0b",
+  "name": "José Eduardo181 Lorenzo669 Brito172",
+  "gender": "male",
+  "birthDate": "1955-12-19",
+  "source_file": "José_Eduardo181_Brito172_552cf1e4-a8ab-85dd-a08c-883fbdbd7d0b.json",
+  "n_conditions": 28,
+  "n_medications": 12,
+  "conditions": [
+   "Acute bronchitis (disorder)",
+   "Anemia (disorder)",
+   "Body mass index 30+ - obesity (finding)",
+   "Diabetes mellitus type 2 (disorder)",
+   "Full-time employment (finding)",
+   "Gingival disease (disorder)",
+   "Gingivitis (disorder)",
+   "Hyperlipidemia (disorder)",
+   "Hypertriglyceridemia (disorder)",
+   "Limited social contact (finding)",
+   "Medication review due (situation)",
+   "Metabolic syndrome X (disorder)",
+   "Overlapping malignant neoplasm of colon (disorder)",
+   "Part-time employment (finding)",
+   "Polyp of colon (disorder)",
+   "Prediabetes (finding)",
+   "Primary dental caries (disorder)",
+   "Received higher education (finding)",
+   "Refugee (person)",
+   "Risk activity involvement (finding)",
+   "Sepsis (disorder)",
+   "Social isolation (finding)",
+   "Stress (finding)"
+  ],
+  "medications": [
+   "Acetaminophen 325 MG Oral Tablet",
+   "Simvastatin 10 MG Oral Tablet"
+  ],
+  "recent_observations": [
+   {
+    "code": "Cause of Death [US Standard Certificate of Death]",
+    "date": "2010-02-22T13:01:42-08:00",
+    "value": null
+   },
+   {
+    "code": "Total score [DAST-10]",
+    "date": "2010-01-11T14:10:50-08:00",
+    "value": "1 {score}"
+   },
+   {
+    "code": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
+    "date": "2010-01-11T13:36:36-08:00",
+    "value": null
+   },
+   {
+    "code": "Hemoglobin A1c/Hemoglobin.total in Blood",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "6.86 %"
+   },
+   {
+    "code": "Body Height",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "180.4 cm"
+   },
+   {
+    "code": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "3 {score}"
+   },
+   {
+    "code": "Body Weight",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "89.1 kg"
+   },
+   {
+    "code": "Body mass index (BMI) [Ratio]",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "27.37 kg/m2"
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": null
+   },
+   {
+    "code": "Heart rate",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "78 /min"
+   },
+   {
+    "code": "Respiratory rate",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "13 /min"
+   },
+   {
+    "code": "Glucose [Mass/volume] in Blood",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "120.56 mg/dL"
+   },
+   {
+    "code": "Urea nitrogen [Mass/volume] in Blood",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "19.67 mg/dL"
+   },
+   {
+    "code": "Creatinine [Mass/volume] in Blood",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "1.07 mg/dL"
+   },
+   {
+    "code": "Calcium [Mass/volume] in Blood",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "9.58 mg/dL"
+   },
+   {
+    "code": "Sodium [Moles/volume] in Blood",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "141.46 mmol/L"
+   },
+   {
+    "code": "Potassium [Moles/volume] in Blood",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "4.99 mmol/L"
+   },
+   {
+    "code": "Chloride [Moles/volume] in Blood",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "108.75 mmol/L"
+   },
+   {
+    "code": "Carbon dioxide, total [Moles/volume] in Blood",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "28.15 mmol/L"
+   },
+   {
+    "code": "Cholesterol [Mass/volume] in Serum or Plasma",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "212.54 mg/dL"
+   },
+   {
+    "code": "Triglyceride [Mass/volume] in Serum or Plasma",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "165.81 mg/dL"
+   },
+   {
+    "code": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "121.63 mg/dL"
+   },
+   {
+    "code": "Cholesterol in HDL [Mass/volume] in Serum or Plasma",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "57.75 mg/dL"
+   },
+   {
+    "code": "Microalbumin/Creatinine [Mass Ratio] in Urine",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "4.18 mg/g"
+   },
+   {
+    "code": "Glomerular filtration rate [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)/1.73 sq M",
+    "date": "2010-01-11T13:01:42-08:00",
+    "value": "146.2 mL/min/{1.73_m2}"
+   }
+  ]
+ },
+ {
+  "id": "f3cc4a2f-c829-281d-2efb-92ca360c45fa",
+  "mrn": "f3cc4a2f-c829-281d-2efb-92ca360c45fa",
+  "name": "José Emilio366 Joaquín233 Leiva147",
+  "gender": "male",
+  "birthDate": "1955-12-19",
+  "source_file": "José_Emilio366_Leiva147_f3cc4a2f-c829-281d-2efb-92ca360c45fa.json",
+  "n_conditions": 348,
+  "n_medications": 515,
+  "conditions": [
+   "Abnormal findings diagnostic imaging heart+coronary circulat (finding)",
+   "Acute ST segment elevation myocardial infarction (disorder)",
+   "Acute viral pharyngitis (disorder)",
+   "Anemia (disorder)",
+   "Awaiting transplantation of kidney (situation)",
+   "Body mass index 30+ - obesity (finding)",
+   "Chronic kidney disease stage 1 (disorder)",
+   "Chronic kidney disease stage 2 (disorder)",
+   "Chronic kidney disease stage 3 (disorder)",
+   "Chronic kidney disease stage 4 (disorder)",
+   "Chronic sinusitis (disorder)",
+   "Diabetes mellitus type 2 (disorder)",
+   "Disorder of kidney due to diabetes mellitus (disorder)",
+   "Essential hypertension (disorder)",
+   "Fractured dental filling (finding)",
+   "Full-time employment (finding)",
+   "Gingival disease (disorder)",
+   "Gingivitis (disorder)",
+   "Has a criminal record (finding)",
+   "History of coronary artery bypass grafting (situation)",
+   "History of myocardial infarction (situation)",
+   "Hypertriglyceridemia (disorder)",
+   "Infection of tooth (disorder)",
+   "Ischemic heart disease (disorder)",
+   "Leaking dental filling (finding)",
+   "Limited social contact (finding)",
+   "Loss of teeth (disorder)",
+   "Medication review due (situation)",
+   "Metabolic syndrome X (disorder)",
+   "Microalbuminuria due to type 2 diabetes mellitus (disorder)",
+   "Myocardial infarction (disorder)",
+   "Neuropathy due to type 2 diabetes mellitus (disorder)",
+   "Nonproliferative diabetic retinopathy due to type II diabetes mellitus",
+   "Not in labor force (finding)",
+   "Obstructive sleep apnea syndrome (disorder)",
+   "Part-time employment (finding)",
+   "Polyp of colon (disorder)",
+   "Prediabetes (finding)",
+   "Primary dental caries (disorder)",
+   "Proteinuria due to type 2 diabetes mellitus (disorder)"
+  ],
+  "medications": [
+   "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+   "Clopidogrel 75 MG Oral Tablet",
+   "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+   "Simvastatin 20 MG Oral Tablet",
+   "aspirin 81 MG Oral Tablet",
+   "carvedilol 25 MG Oral Tablet",
+   "insulin isophane, human 70 UNT/ML / insulin, regular, human 30 UNT/ML Injectable Suspension [Humulin]",
+   "lisinopril 10 MG Oral Tablet",
+   "losartan potassium 50 MG Oral Tablet",
+   "prasugrel 10 MG Oral Tablet",
+   "rosuvastatin calcium 5 MG Oral Tablet"
+  ],
+  "recent_observations": [
+   {
+    "code": "Glucose [Mass/volume] in Serum or Plasma",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": "109.1 mg/dL"
+   },
+   {
+    "code": "Urea nitrogen [Mass/volume] in Serum or Plasma",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": "14.79 mg/dL"
+   },
+   {
+    "code": "Creatinine [Mass/volume] in Serum or Plasma",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": "2.4241 mg/dL"
+   },
+   {
+    "code": "Calcium [Mass/volume] in Serum or Plasma",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": "8.79 mg/dL"
+   },
+   {
+    "code": "Sodium [Moles/volume] in Serum or Plasma",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": "143.42 mmol/L"
+   },
+   {
+    "code": "Potassium [Moles/volume] in Serum or Plasma",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": "3.82 mmol/L"
+   },
+   {
+    "code": "Chloride [Moles/volume] in Serum or Plasma",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": "105.64 mmol/L"
+   },
+   {
+    "code": "Carbon dioxide, total [Moles/volume] in Serum or Plasma",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": "24.5 mmol/L"
+   },
+   {
+    "code": "Glomerular filtration rate [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)/1.73 sq M",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": "15.447 mL/min/{1.73_m2}"
+   },
+   {
+    "code": "Appearance of Urine",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": null
+   },
+   {
+    "code": "Odor of Urine",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": null
+   },
+   {
+    "code": "Clarity of Urine",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": null
+   },
+   {
+    "code": "Color of Urine",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": null
+   },
+   {
+    "code": "Glucose [Mass/volume] in Urine by Test strip",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": "2.1064 mg/dL"
+   },
+   {
+    "code": "Glucose [Presence] in Urine by Test strip",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": null
+   },
+   {
+    "code": "Bilirubin.total [Mass/volume] in Urine by Test strip",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": "1.4875 mg/dL"
+   },
+   {
+    "code": "Bilirubin.total [Presence] in Urine by Test strip",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": null
+   },
+   {
+    "code": "Ketones [Mass/volume] in Urine by Test strip",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": "14.504 mg/dL"
+   },
+   {
+    "code": "Ketones [Presence] in Urine by Test strip",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": null
+   },
+   {
+    "code": "Specific gravity of Urine by Test strip",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": "1.0085 {nominal}"
+   },
+   {
+    "code": "pH of Urine by Test strip",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": "5.31 pH"
+   },
+   {
+    "code": "Protein [Mass/volume] in Urine by Test strip",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": "360.15 mg/dL"
+   },
+   {
+    "code": "Protein [Presence] in Urine by Test strip",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": null
+   },
+   {
+    "code": "Nitrite [Presence] in Urine by Test strip",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": null
+   },
+   {
+    "code": "Hemoglobin [Presence] in Urine by Test strip",
+    "date": "2026-07-06T14:01:42-07:00",
+    "value": null
+   }
+  ]
+ },
+ {
+  "id": "bb1ad573-19b8-9cd8-45aa-9ffebb1ec459",
+  "mrn": "bb1ad573-19b8-9cd8-45aa-9ffebb1ec459",
+  "name": "Juliette736 Merideth332 Farrell962",
+  "gender": "female",
+  "birthDate": "1963-01-04",
+  "source_file": "Juliette736_Farrell962_bb1ad573-19b8-9cd8-45aa-9ffebb1ec459.json",
+  "n_conditions": 60,
+  "n_medications": 84,
+  "conditions": [
+   "Abnormal findings diagnostic imaging heart+coronary circulat (finding)",
+   "Acute bronchitis (disorder)",
+   "Acute viral pharyngitis (disorder)",
+   "Anemia (disorder)",
+   "Body mass index 30+ - obesity (finding)",
+   "Burn injury (morphologic abnormality)",
+   "Chronic intractable migraine without aura (disorder)",
+   "Chronic neck pain (finding)",
+   "Chronic pain (finding)",
+   "Diabetes mellitus type 2 (disorder)",
+   "Epidermal burn of skin (disorder)",
+   "Essential hypertension (disorder)",
+   "Full-time employment (finding)",
+   "Gingival disease (disorder)",
+   "Gingivitis (disorder)",
+   "Hypertriglyceridemia (disorder)",
+   "Ischemic heart disease (disorder)",
+   "Leaking dental filling (finding)",
+   "Limited social contact (finding)",
+   "Medication review due (situation)",
+   "Metabolic syndrome X (disorder)",
+   "Nonproliferative diabetic retinopathy due to type II diabetes mellitus",
+   "Not in labor force (finding)",
+   "Part-time employment (finding)",
+   "Past pregnancy history of miscarriage (situation)",
+   "Primary dental caries (disorder)",
+   "Received higher education (finding)",
+   "Risk activity involvement (finding)",
+   "Social isolation (finding)",
+   "Stress (finding)",
+   "Unemployed (finding)",
+   "Viral sinusitis (disorder)"
+  ],
+  "medications": [
+   "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+   "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet",
+   "Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]",
+   "Acetaminophen 325 MG Oral Tablet",
+   "Clopidogrel 75 MG Oral Tablet",
+   "Hydrochlorothiazide 25 MG Oral Tablet",
+   "Ibuprofen 400 MG Oral Tablet [Ibu]",
+   "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+   "Simvastatin 20 MG Oral Tablet",
+   "lisinopril 10 MG Oral Tablet"
+  ],
+  "recent_observations": [
+   {
+    "code": "Body temperature",
+    "date": "2026-05-15T03:48:55-07:00",
+    "value": "37.037 Cel"
+   },
+   {
+    "code": "Hemoglobin A1c/Hemoglobin.total in Blood",
+    "date": "2026-05-01T03:48:55-07:00",
+    "value": "6.91 %"
+   },
+   {
+    "code": "Total score [DAST-10]",
+    "date": "2026-04-24T05:56:14-07:00",
+    "value": "0 {score}"
+   },
+   {
+    "code": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+    "date": "2026-04-24T05:23:14-07:00",
+    "value": "2 {score}"
+   },
+   {
+    "code": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
+    "date": "2026-04-24T04:47:49-07:00",
+    "value": null
+   },
+   {
+    "code": "Hemoglobin A1c/Hemoglobin.total in Blood",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "6.91 %"
+   },
+   {
+    "code": "Body Height",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "148.2 cm"
+   },
+   {
+    "code": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "1 {score}"
+   },
+   {
+    "code": "Body Weight",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "60.7 kg"
+   },
+   {
+    "code": "Body mass index (BMI) [Ratio]",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "27.64 kg/m2"
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": null
+   },
+   {
+    "code": "Heart rate",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "89 /min"
+   },
+   {
+    "code": "Respiratory rate",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "14 /min"
+   },
+   {
+    "code": "Glucose [Mass/volume] in Blood",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "112.1 mg/dL"
+   },
+   {
+    "code": "Urea nitrogen [Mass/volume] in Blood",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "11.86 mg/dL"
+   },
+   {
+    "code": "Creatinine [Mass/volume] in Blood",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "0.55 mg/dL"
+   },
+   {
+    "code": "Calcium [Mass/volume] in Blood",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "9 mg/dL"
+   },
+   {
+    "code": "Sodium [Moles/volume] in Blood",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "138.08 mmol/L"
+   },
+   {
+    "code": "Potassium [Moles/volume] in Blood",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "5.08 mmol/L"
+   },
+   {
+    "code": "Chloride [Moles/volume] in Blood",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "109.38 mmol/L"
+   },
+   {
+    "code": "Carbon dioxide, total [Moles/volume] in Blood",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "27.22 mmol/L"
+   },
+   {
+    "code": "Cholesterol [Mass/volume] in Serum or Plasma",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "227.42 mg/dL"
+   },
+   {
+    "code": "Triglyceride [Mass/volume] in Serum or Plasma",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "154.55 mg/dL"
+   },
+   {
+    "code": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "143.1 mg/dL"
+   },
+   {
+    "code": "Cholesterol in HDL [Mass/volume] in Serum or Plasma",
+    "date": "2026-04-24T03:48:55-07:00",
+    "value": "53.42 mg/dL"
+   }
+  ]
+ },
+ {
+  "id": "65ad3780-e9f9-7898-f86c-eb2943dd03c5",
+  "mrn": "65ad3780-e9f9-7898-f86c-eb2943dd03c5",
+  "name": "Lawrence741 Tristan353 Murphy561",
+  "gender": "male",
+  "birthDate": "1956-09-22",
+  "source_file": "Lawrence741_Murphy561_65ad3780-e9f9-7898-f86c-eb2943dd03c5.json",
+  "n_conditions": 34,
+  "n_medications": 3,
+  "conditions": [
+   "Acute viral pharyngitis (disorder)",
+   "Anemia (disorder)",
+   "Body mass index 30+ - obesity (finding)",
+   "Chronic sinusitis (disorder)",
+   "Dental filling lost (finding)",
+   "Full-time employment (finding)",
+   "Gingival disease (disorder)",
+   "Gingivitis (disorder)",
+   "Has a criminal record (finding)",
+   "Homeless (finding)",
+   "Housing unsatisfactory (finding)",
+   "Limited social contact (finding)",
+   "Loose dental filling (finding)",
+   "Medication review due (situation)",
+   "Not in labor force (finding)",
+   "Only received primary school education (finding)",
+   "Otitis media (disorder)",
+   "Part-time employment (finding)",
+   "Prediabetes (finding)",
+   "Social isolation (finding)",
+   "Streptococcal sore throat (disorder)",
+   "Stress (finding)",
+   "Unemployed (finding)"
+  ],
+  "medications": [
+   "Acetaminophen 325 MG Oral Tablet",
+   "Amoxicillin 250 MG Oral Capsule",
+   "Penicillin V Potassium 500 MG Oral Tablet"
+  ],
+  "recent_observations": [
+   {
+    "code": "Total score [DAST-10]",
+    "date": "2026-01-10T05:50:52-08:00",
+    "value": "0 {score}"
+   },
+   {
+    "code": "Fall risk total [Morse Fall Scale]",
+    "date": "2026-01-10T05:12:18-08:00",
+    "value": "120 {#}"
+   },
+   {
+    "code": "Fall risk level [Morse Fall Scale]",
+    "date": "2026-01-10T05:12:18-08:00",
+    "value": null
+   },
+   {
+    "code": "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]",
+    "date": "2026-01-10T04:43:17-08:00",
+    "value": "2 {score}"
+   },
+   {
+    "code": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
+    "date": "2026-01-10T04:26:01-08:00",
+    "value": null
+   },
+   {
+    "code": "Hemoglobin A1c/Hemoglobin.total in Blood",
+    "date": "2026-01-10T03:55:32-08:00",
+    "value": "6.24 %"
+   },
+   {
+    "code": "Body Height",
+    "date": "2026-01-10T03:55:32-08:00",
+    "value": "160.1 cm"
+   },
+   {
+    "code": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+    "date": "2026-01-10T03:55:32-08:00",
+    "value": "0 {score}"
+   },
+   {
+    "code": "Body Weight",
+    "date": "2026-01-10T03:55:32-08:00",
+    "value": "77 kg"
+   },
+   {
+    "code": "Body mass index (BMI) [Ratio]",
+    "date": "2026-01-10T03:55:32-08:00",
+    "value": "30.04 kg/m2"
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-01-10T03:55:32-08:00",
+    "value": null
+   },
+   {
+    "code": "Heart rate",
+    "date": "2026-01-10T03:55:32-08:00",
+    "value": "67 /min"
+   },
+   {
+    "code": "Respiratory rate",
+    "date": "2026-01-10T03:55:32-08:00",
+    "value": "14 /min"
+   },
+   {
+    "code": "Glucose [Mass/volume] in Blood",
+    "date": "2026-01-10T03:55:32-08:00",
+    "value": "67.26 mg/dL"
+   },
+   {
+    "code": "Urea nitrogen [Mass/volume] in Blood",
+    "date": "2026-01-10T03:55:32-08:00",
+    "value": "14.07 mg/dL"
+   },
+   {
+    "code": "Creatinine [Mass/volume] in Blood",
+    "date": "2026-01-10T03:55:32-08:00",
+    "value": "0.98 mg/dL"
+   },
+   {
+    "code": "Calcium [Mass/volume] in Blood",
+    "date": "2026-01-10T03:55:32-08:00",
+    "value": "8.64 mg/dL"
+   },
+   {
+    "code": "Sodium [Moles/volume] in Blood",
+    "date": "2026-01-10T03:55:32-08:00",
+    "value": "136.66 mmol/L"
+   },
+   {
+    "code": "Potassium [Moles/volume] in Blood",
+    "date": "2026-01-10T03:55:32-08:00",
+    "value": "4.92 mmol/L"
+   },
+   {
+    "code": "Chloride [Moles/volume] in Blood",
+    "date": "2026-01-10T03:55:32-08:00",
+    "value": "108 mmol/L"
+   },
+   {
+    "code": "Carbon dioxide, total [Moles/volume] in Blood",
+    "date": "2026-01-10T03:55:32-08:00",
+    "value": "25.46 mmol/L"
+   },
+   {
+    "code": "Tobacco smoking status",
+    "date": "2026-01-10T03:55:32-08:00",
+    "value": null
+   },
+   {
+    "code": "Total score [DAST-10]",
+    "date": "2025-01-04T05:58:17-08:00",
+    "value": "2 {score}"
+   },
+   {
+    "code": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+    "date": "2025-01-04T05:15:14-08:00",
+    "value": "0 {score}"
+   },
+   {
+    "code": "Fall risk total [Morse Fall Scale]",
+    "date": "2025-01-04T04:42:01-08:00",
+    "value": "29 {#}"
+   }
+  ]
+ },
+ {
+  "id": "f09b04b3-8dd7-aee4-d146-d332a0a77923",
+  "mrn": "f09b04b3-8dd7-aee4-d146-d332a0a77923",
+  "name": "Renate369 Moriah648 Jones311",
+  "gender": "female",
+  "birthDate": "1987-06-01",
+  "source_file": "Renate369_Moriah648_Jones311_f09b04b3-8dd7-aee4-d146-d332a0a77923.json",
+  "n_conditions": 15,
+  "n_medications": 6,
+  "conditions": [
+   "Acute bronchitis (disorder)",
+   "Acute viral pharyngitis (disorder)",
+   "Full-time employment (finding)",
+   "Medication review due (situation)",
+   "Misuses drugs (finding)",
+   "Normal pregnancy (finding)",
+   "Not in labor force (finding)",
+   "Received higher education (finding)",
+   "Severe anxiety (panic) (finding)",
+   "Sprain (morphologic abnormality)",
+   "Sprain of ankle (disorder)",
+   "Stress (finding)",
+   "Viral sinusitis (disorder)"
+  ],
+  "medications": [
+   "Acetaminophen 325 MG Oral Tablet",
+   "Naproxen sodium 220 MG Oral Tablet",
+   "{21 (ethinyl estradiol 0.03 MG / levonorgestrel 0.15 MG Oral Tablet) / 7 (inert ingredients 1 MG Oral Tablet) } Pack [Levora 0.15/30 28 Day]",
+   "{28 (norethindrone 0.35 MG Oral Tablet) } Pack [Errin 28 Day]",
+   "{7 (ethinyl estradiol 0.01 MG Oral Tablet) / 84 (ethinyl estradiol 0.03 MG / levonorgestrel 0.15 MG Oral Tablet) } Pack [Seasonique]"
+  ],
+  "recent_observations": [
+   {
+    "code": "Total score [DAST-10]",
+    "date": "2024-08-20T00:12:52-07:00",
+    "value": "2 {score}"
+   },
+   {
+    "code": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+    "date": "2024-08-19T23:41:48-07:00",
+    "value": "1 {score}"
+   },
+   {
+    "code": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
+    "date": "2024-08-19T23:00:27-07:00",
+    "value": null
+   },
+   {
+    "code": "Body Height",
+    "date": "2024-08-19T22:04:57-07:00",
+    "value": "164.3 cm"
+   },
+   {
+    "code": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+    "date": "2024-08-19T22:04:57-07:00",
+    "value": "0 {score}"
+   },
+   {
+    "code": "Body Weight",
+    "date": "2024-08-19T22:04:57-07:00",
+    "value": "78.9 kg"
+   },
+   {
+    "code": "Body mass index (BMI) [Ratio]",
+    "date": "2024-08-19T22:04:57-07:00",
+    "value": "29.21 kg/m2"
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2024-08-19T22:04:57-07:00",
+    "value": null
+   },
+   {
+    "code": "Heart rate",
+    "date": "2024-08-19T22:04:57-07:00",
+    "value": "67 /min"
+   },
+   {
+    "code": "Respiratory rate",
+    "date": "2024-08-19T22:04:57-07:00",
+    "value": "14 /min"
+   },
+   {
+    "code": "Cholesterol [Mass/volume] in Serum or Plasma",
+    "date": "2024-08-19T22:04:57-07:00",
+    "value": "146.02 mg/dL"
+   },
+   {
+    "code": "Triglyceride [Mass/volume] in Serum or Plasma",
+    "date": "2024-08-19T22:04:57-07:00",
+    "value": "122.02 mg/dL"
+   },
+   {
+    "code": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay",
+    "date": "2024-08-19T22:04:57-07:00",
+    "value": "68.49 mg/dL"
+   },
+   {
+    "code": "Cholesterol in HDL [Mass/volume] in Serum or Plasma",
+    "date": "2024-08-19T22:04:57-07:00",
+    "value": "53.13 mg/dL"
+   },
+   {
+    "code": "Tobacco smoking status",
+    "date": "2024-08-19T22:04:57-07:00",
+    "value": null
+   },
+   {
+    "code": "Total score [DAST-10]",
+    "date": "2021-08-17T00:30:52-07:00",
+    "value": "4 {score}"
+   },
+   {
+    "code": "Total score [HARK]",
+    "date": "2021-08-16T23:55:49-07:00",
+    "value": "0 {score}"
+   },
+   {
+    "code": "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]",
+    "date": "2021-08-16T23:18:09-07:00",
+    "value": "15 {score}"
+   },
+   {
+    "code": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
+    "date": "2021-08-16T22:49:13-07:00",
+    "value": null
+   },
+   {
+    "code": "Body Height",
+    "date": "2021-08-16T22:04:57-07:00",
+    "value": "164.3 cm"
+   },
+   {
+    "code": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+    "date": "2021-08-16T22:04:57-07:00",
+    "value": "0 {score}"
+   },
+   {
+    "code": "Body Weight",
+    "date": "2021-08-16T22:04:57-07:00",
+    "value": "80.7 kg"
+   },
+   {
+    "code": "Body mass index (BMI) [Ratio]",
+    "date": "2021-08-16T22:04:57-07:00",
+    "value": "29.91 kg/m2"
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2021-08-16T22:04:57-07:00",
+    "value": null
+   },
+   {
+    "code": "Heart rate",
+    "date": "2021-08-16T22:04:57-07:00",
+    "value": "64 /min"
+   }
+  ]
+ },
+ {
+  "id": "f6b55bba-28da-1b7e-c3b2-e7995291dc30",
+  "mrn": "f6b55bba-28da-1b7e-c3b2-e7995291dc30",
+  "name": "Teodoro374 Jose871 Schulist381",
+  "gender": "male",
+  "birthDate": "1961-10-12",
+  "source_file": "Teodoro374_Schulist381_f6b55bba-28da-1b7e-c3b2-e7995291dc30.json",
+  "n_conditions": 39,
+  "n_medications": 70,
+  "conditions": [
+   "Acute viral pharyngitis (disorder)",
+   "Body mass index 30+ - obesity (finding)",
+   "Chronic congestive heart failure (disorder)",
+   "Chronic low back pain (finding)",
+   "Chronic neck pain (finding)",
+   "Chronic pain (finding)",
+   "Chronic sinusitis (disorder)",
+   "Concussion injury of brain (disorder)",
+   "Concussion with no loss of consciousness (disorder)",
+   "Essential hypertension (disorder)",
+   "Full-time employment (finding)",
+   "Gingival disease (disorder)",
+   "Gingivitis (disorder)",
+   "Housing unsatisfactory (finding)",
+   "Limited social contact (finding)",
+   "Medication review due (situation)",
+   "Not in labor force (finding)",
+   "Part-time employment (finding)",
+   "Primary dental caries (disorder)",
+   "Pulmonary emphysema (disorder)",
+   "Received higher education (finding)",
+   "Social isolation (finding)",
+   "Stress (finding)",
+   "Viral sinusitis (disorder)"
+  ],
+  "medications": [
+   "60 ACTUAT Fluticasone propionate 0.25 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler",
+   "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet",
+   "Furosemide 40 MG Oral Tablet",
+   "Hydrochlorothiazide 25 MG Oral Tablet",
+   "albuterol 5 MG/ML Inhalation Solution",
+   "amLODIPine 2.5 MG Oral Tablet",
+   "lisinopril 10 MG Oral Tablet"
+  ],
+  "recent_observations": [
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-07-08T23:56:14-07:00",
+    "value": null
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-07-06T23:56:14-07:00",
+    "value": null
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-07-05T23:56:14-07:00",
+    "value": null
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-07-04T23:56:14-07:00",
+    "value": null
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-07-03T23:56:14-07:00",
+    "value": null
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-07-02T23:56:14-07:00",
+    "value": null
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-06-29T23:56:14-07:00",
+    "value": null
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-06-28T23:56:14-07:00",
+    "value": null
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-06-26T23:56:14-07:00",
+    "value": null
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-06-25T23:56:14-07:00",
+    "value": null
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-06-22T23:56:14-07:00",
+    "value": null
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-06-21T23:56:14-07:00",
+    "value": null
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-06-19T23:56:14-07:00",
+    "value": null
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-06-17T23:56:14-07:00",
+    "value": null
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-06-16T23:56:14-07:00",
+    "value": null
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-06-14T23:56:14-07:00",
+    "value": null
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2026-06-12T23:56:14-07:00",
+    "value": null
+   },
+   {
+    "code": "Body Weight",
+    "date": "2026-06-11T11:01:33-07:00",
+    "value": "95.9 kg"
+   },
+   {
+    "code": "Natriuretic peptide.B prohormone N-Terminal [Mass/volume] in Serum or Plasma",
+    "date": "2026-06-11T11:01:33-07:00",
+    "value": "1119.6 pg/mL"
+   },
+   {
+    "code": "Leukocytes [#/volume] in Blood by Automated count",
+    "date": "2026-06-11T11:01:33-07:00",
+    "value": "6.7584 10*3/uL"
+   },
+   {
+    "code": "Erythrocytes [#/volume] in Blood by Automated count",
+    "date": "2026-06-11T11:01:33-07:00",
+    "value": "5.0501 10*6/uL"
+   },
+   {
+    "code": "Hemoglobin [Mass/volume] in Blood",
+    "date": "2026-06-11T11:01:33-07:00",
+    "value": "13.556 g/dL"
+   },
+   {
+    "code": "Hematocrit [Volume Fraction] of Blood by Automated count",
+    "date": "2026-06-11T11:01:33-07:00",
+    "value": "49.582 %"
+   },
+   {
+    "code": "MCV [Entitic mean volume] in Red Blood Cells by Automated count",
+    "date": "2026-06-11T11:01:33-07:00",
+    "value": "92.952 fL"
+   },
+   {
+    "code": "MCH [Entitic mass] by Automated count",
+    "date": "2026-06-11T11:01:33-07:00",
+    "value": "28.399 pg"
+   }
+  ]
+ },
+ {
+  "id": "efe49da9-7cb1-c23b-6b7b-3fc8b5810e0c",
+  "mrn": "efe49da9-7cb1-c23b-6b7b-3fc8b5810e0c",
+  "name": "Tracey100 Ricardo560 Cruickshank494",
+  "gender": "male",
+  "birthDate": "1988-05-24",
+  "source_file": "Tracey100_Cruickshank494_efe49da9-7cb1-c23b-6b7b-3fc8b5810e0c.json",
+  "n_conditions": 24,
+  "n_medications": 1,
+  "conditions": [
+   "Acute viral pharyngitis (disorder)",
+   "Body mass index 30+ - obesity (finding)",
+   "Chronic sinusitis (disorder)",
+   "Cough (finding)",
+   "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)",
+   "Dyspnea (finding)",
+   "Fever (finding)",
+   "Full-time employment (finding)",
+   "Gingival disease (disorder)",
+   "Gingivitis (disorder)",
+   "Laceration - injury (disorder)",
+   "Laceration of hand (disorder)",
+   "Loss of taste (finding)",
+   "Medication review due (situation)",
+   "Primary dental caries (disorder)",
+   "Received higher education (finding)",
+   "Sore throat (finding)",
+   "Stress (finding)",
+   "Suspected disease caused by Severe acute respiratory coronavirus 2 (situation)",
+   "Victim of intimate partner abuse (finding)",
+   "Wheezing (finding)"
+  ],
+  "medications": [
+   "Acetaminophen 325 MG Oral Tablet"
+  ],
+  "recent_observations": [
+   {
+    "code": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+    "date": "2025-08-12T04:21:07-07:00",
+    "value": "1 {score}"
+   },
+   {
+    "code": "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]",
+    "date": "2025-08-12T03:48:07-07:00",
+    "value": "1 {score}"
+   },
+   {
+    "code": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
+    "date": "2025-08-12T03:28:46-07:00",
+    "value": null
+   },
+   {
+    "code": "Body Height",
+    "date": "2025-08-12T02:32:34-07:00",
+    "value": "184.5 cm"
+   },
+   {
+    "code": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+    "date": "2025-08-12T02:32:34-07:00",
+    "value": "1 {score}"
+   },
+   {
+    "code": "Body Weight",
+    "date": "2025-08-12T02:32:34-07:00",
+    "value": "103.2 kg"
+   },
+   {
+    "code": "Body mass index (BMI) [Ratio]",
+    "date": "2025-08-12T02:32:34-07:00",
+    "value": "30.32 kg/m2"
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2025-08-12T02:32:34-07:00",
+    "value": null
+   },
+   {
+    "code": "Heart rate",
+    "date": "2025-08-12T02:32:34-07:00",
+    "value": "68 /min"
+   },
+   {
+    "code": "Respiratory rate",
+    "date": "2025-08-12T02:32:34-07:00",
+    "value": "15 /min"
+   },
+   {
+    "code": "Cholesterol [Mass/volume] in Serum or Plasma",
+    "date": "2025-08-12T02:32:34-07:00",
+    "value": "190.05 mg/dL"
+   },
+   {
+    "code": "Triglyceride [Mass/volume] in Serum or Plasma",
+    "date": "2025-08-12T02:32:34-07:00",
+    "value": "123.26 mg/dL"
+   },
+   {
+    "code": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay",
+    "date": "2025-08-12T02:32:34-07:00",
+    "value": "108.64 mg/dL"
+   },
+   {
+    "code": "Cholesterol in HDL [Mass/volume] in Serum or Plasma",
+    "date": "2025-08-12T02:32:34-07:00",
+    "value": "56.75 mg/dL"
+   },
+   {
+    "code": "Tobacco smoking status",
+    "date": "2025-08-12T02:32:34-07:00",
+    "value": null
+   },
+   {
+    "code": "Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]",
+    "date": "2022-08-09T04:05:44-07:00",
+    "value": "21 {score}"
+   },
+   {
+    "code": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+    "date": "2022-08-09T03:44:13-07:00",
+    "value": "4 {score}"
+   },
+   {
+    "code": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
+    "date": "2022-08-09T03:09:02-07:00",
+    "value": null
+   },
+   {
+    "code": "Body Height",
+    "date": "2022-08-09T02:32:34-07:00",
+    "value": "184.5 cm"
+   },
+   {
+    "code": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+    "date": "2022-08-09T02:32:34-07:00",
+    "value": "4 {score}"
+   },
+   {
+    "code": "Body Weight",
+    "date": "2022-08-09T02:32:34-07:00",
+    "value": "103.2 kg"
+   },
+   {
+    "code": "Body mass index (BMI) [Ratio]",
+    "date": "2022-08-09T02:32:34-07:00",
+    "value": "30.32 kg/m2"
+   },
+   {
+    "code": "Blood pressure panel with all children optional",
+    "date": "2022-08-09T02:32:34-07:00",
+    "value": null
+   },
+   {
+    "code": "Heart rate",
+    "date": "2022-08-09T02:32:34-07:00",
+    "value": "89 /min"
+   },
+   {
+    "code": "Respiratory rate",
+    "date": "2022-08-09T02:32:34-07:00",
+    "value": "14 /min"
+   }
+  ]
+ }
+]

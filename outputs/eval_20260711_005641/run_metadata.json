@@ -1,0 +1,17 @@
+{
+ "vmag_version": "0.0.1",
+ "timestamp": "20260711_005641",
+ "as_of": "2026-07-11",
+ "agents": [
+  "ambient",
+  "prompt_only",
+  "vmag"
+ ],
+ "n_cases": 9,
+ "fhir_dir": "data\\synthea\\fhir",
+ "cases_dir": "benchmark\\cases",
+ "data_sources": [
+  "Synthea (Apache-2.0, synthetic)",
+  "MedAgentBench-style action space (MIT)"
+ ]
+}

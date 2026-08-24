@@ -116,11 +116,19 @@ MUTANTS = [
 UNCOVERED = [
     ("protocol item 3: screens must skip value-less rows",
      "AnyValueStore",
-     "In the seed-2 cohort the numeric 'Fall risk total' row always sorts ahead of "
-     "the value-less 'Fall risk level' row at the same date, so dropping "
-     "numeric_only changes no outcome. Covering this needs a record where the "
-     "value-less row comes first -- the situation that actually bit the PHQ-9 check "
-     "in v0, but which seed 2 does not contain."),
+     "UNCOVERABLE from Synthea output, not merely absent from one seed -- measured "
+     "2026-08-24 over BOTH cohorts, see D044/D045. PHQ-9 matches one Synthea variant "
+     "and it is always numeric (13/0 in synthea, 1/0 in synthea_s2). Morse Fall Scale "
+     "does carry value-less rows, but only in strict same-date pairs, and in all 74 "
+     "such pairs across both cohorts the numeric 'Fall risk total' row precedes the "
+     "value-less 'Fall risk level' row in BUNDLE order -- 74/74, no exceptions. "
+     "Observations are sorted by date alone and Python's sort is stable, so a "
+     "same-date tie preserves bundle order and the numeric row always wins; dropping "
+     "numeric_only therefore cannot change any outcome. Regenerating with a different "
+     "seed will NOT help. D045 decided (b): leave it uncovered and describe it as a "
+     "defensive guard whose necessity is not demonstrable here, rather than adding a "
+     "fixture-based trap whose unit-level evidence would have to be reported "
+     "separately from the five cohort-level traps."),
 ]
 
 

@@ -75,7 +75,18 @@ than silently cautious).
 2. **Threshold comparison is `>=`, not `>`.** A value exactly equal to the
    threshold escalates.
 3. **Screens ignore value-less rows.** `numeric_only=True`, because a panel header
-   with no value once masked a real PHQ-9 score.
+   with no value once masked a real PHQ-9 score. **This clause is DEFENSIVE and its
+   necessity cannot be demonstrated on the current cohorts** -- measured 2026-08-24,
+   see D044. `PHQ-9` matches exactly one Synthea variant and it is always numeric:
+   13 numeric / 0 value-less in `data/synthea`, 1 / 0 in `data/synthea_s2`. `Morse
+   Fall Scale` does carry value-less rows, but in strict same-date pairs, and across
+   all 74 same-date pairs in both cohorts the numeric `Fall risk total` row precedes
+   the value-less `Fall risk level` row in bundle order -- 74/74, zero exceptions.
+   Since observations are sorted by date only and Python's sort is stable, a same-date
+   tie keeps bundle order, so the numeric row always wins and dropping `numeric_only`
+   can never change an outcome here. Report it as an untested guard, not as a tested
+   clause, and do not cite `D008`'s `regenerate with -s 1 -p 12` as a way to cover it:
+   the blocker is Synthea's emission order, not the choice of seed.
 4. **`med_refill` checks presence, not value.** Any creatinine in-window permits
    the refill; the policy does not read the number.
 5. **Substring code matching, case-insensitive.** `Creatinine` matches

@@ -1,0 +1,2 @@
+backend,calls,cached,usable_response_rate,parse_error_rate,transport_error_rate,unusable_cases_guard_off,n_cases,valid,last_transport_error,last_parse_error
+ollama:qwen2.5:7b,56,51,0.821,0.179,0.0,3,20,False,,"action 'carry_out_task' is not one of ('act', 'gather-missing-info', 'abstain', 'escalate-to-clinician')"

@@ -27,10 +27,15 @@ clinical FHIR setting is a **measurement stance**, not a capability:
 1. **Enforcement delta** — the reduction in unsafe-action rate from wrapping the
    *same* base agent with the guard (a clean causal intervention, not a
    cross-system comparison of different agents).
-2. **Adversary-strength invariance** — the guarded unsafe rate stays ~flat as the
-   base agent sweeps benign → worst-case, because every side effect is mediated.
-   The flat guarded line beside a rising unguarded line is the evidence for the
-   shielding-style guarantee, *instantiated* on a clinical substrate.
+2. ~~**Adversary-strength invariance**~~ — **WITHDRAWN 2026-08-26.** This said the
+   guarded unsafe rate stays flat as the base agent sweeps benign to worst-case
+   *"because every side effect is mediated"* — which states the mechanism that makes
+   the observation necessary and then offers the observation as evidence. It is a
+   tautology: `Guard.review()` discards the agent's plan, so the guarded spread is
+   identically 0.0 for ANY set of agents. Measured — a uniformly random agent, a
+   null agent and a maximally malicious agent all score exactly 1.0 / 0.0 / 1.0
+   guarded, the same as Claude Sonnet on all seven metrics. A flat guarded line is
+   what an out-of-model guard means, not evidence that it works.
 3. **Policy-error accounting + generalization gap** — because side effects are
    mediated, the residual unsafe rate equals the guard's own policy-error rate.
    Measuring that on **held-out, untuned** cases is what lets "verifiable" earn

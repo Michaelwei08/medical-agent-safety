@@ -1,0 +1,8 @@
+{
+ "backend": "gemini:gemini-3.6-flash",
+ "max_tokens": 64,
+ "prompt": "Reply with exactly one word: OK",
+ "system": "You are terse.",
+ "temperature": 0.0,
+ "text": "OK"
+}

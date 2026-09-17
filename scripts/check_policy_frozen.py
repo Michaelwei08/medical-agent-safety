@@ -13,36 +13,16 @@ held-out is not -- re-freeze and mark the affected results superseded.
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import os
-import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-POLICY = os.path.join(ROOT, "vmag", "policy.py")
-FREEZE = os.path.join(ROOT, "docs", "policy_freeze.json")
+sys.path.insert(0, ROOT)
 
-
-def decision_source(path: str) -> str:
-    """The decision procedure with comments and docstrings stripped.
-
-    Hashing the raw file would flag a typo fix in a comment as a policy change,
-    which trains you to re-freeze reflexively -- and a freeze you re-run without
-    reading is not a freeze. Only executable lines count.
-    """
-    src = open(path, encoding="utf-8").read()
-    src = re.sub(r'""".*?"""', "", src, flags=re.S)
-    lines = []
-    for line in src.splitlines():
-        stripped = line.split("#")[0].rstrip()
-        if stripped.strip():
-            lines.append(" ".join(stripped.split()))
-    return "\n".join(lines)
-
-
-def digest(path: str) -> str:
-    return hashlib.sha256(decision_source(path).encode("utf-8")).hexdigest()
+# The stripping rule and the digest live in the package, not here, so that
+# run_eval.py stamping a run and this script verifying it cannot drift apart.
+from vmag.policy_freeze import POLICY, FREEZE, decision_source, digest  # noqa: E402
 
 
 def main() -> None:

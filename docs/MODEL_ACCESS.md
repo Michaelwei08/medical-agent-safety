@@ -221,3 +221,75 @@ VMAG_LLM_OFFLINE=1 python -m vmag.run_eval
 
 A cache miss under that flag is an error, not a silent live call -- so a run that
 claims to be a reproduction cannot quietly become a fresh one.
+
+### Model ids go stale -- checked again 2026-08-25
+
+The table above was checked 2026-08-07 and its Gemini model id has since been
+RETIRED: `gemini-2.0-flash` now returns HTTP 404 "no longer available", and so
+does `gemini-2.5-flash`. Enumerated from the live `/models` endpoint on
+2026-08-25, this key sees 51 models; the flash line currently runs to
+`gemini-3.7-flash`.
+
+Use `gemini-3.6-flash`. It is verified working through `vmag/llm.py` and it
+answers correctly even at a 64-token budget, so its output budget is not shared
+with hidden reasoning. `gemini-3.7-flash` also works but returns EMPTY at 64
+tokens and only answers at 1024, which means a hard case could truncate a JSON
+plan and look like model incompetence rather than a budget artifact.
+
+Never use a `-latest` alias (`gemini-flash-latest`, `gemini-pro-latest`) in a
+benchmark. They move, and a run whose model changed underneath it is not
+reproducible. Pin the version.
+
+`scripts/run_all_models.py` now preflights every backend with one call before
+spending a full run, and treats empty output as failure whether or not an error
+came with it.
+
+### Verified-live model ids, 2026-08-25
+
+Checked against each provider's own `/models` endpoint on 2026-08-25, with a key
+in hand. THREE OF FOUR configured ids had expired in the eighteen days since the
+2026-08-07 table above. Treat every model id in this file as expired until you
+have listed it against the live endpoint; `scripts/run_all_models.py` preflights
+each backend with one call, so a stale id costs one call rather than one run.
+
+| provider | id in use | state on 2026-08-25 |
+|---|---|---|
+| Gemini | `gemini-3.6-flash` | `gemini-2.0-flash` and `gemini-2.5-flash` both RETIRED (HTTP 404). 51 models visible; flash line runs to `gemini-3.7-flash`. |
+| Groq | `openai/gpt-oss-120b` | `llama-3.3-70b-versatile` RETIRED. 13 models visible. |
+| Cerebras | `gemma-4-31b` | `llama-3.3-70b` RETIRED. Only TWO models visible: `gemma-4-31b` and `gpt-oss-120b`. |
+| NVIDIA NIM | `meta/llama-3.3-70b-instruct` | still live; 95 models visible. The only id of the four that had not expired. |
+
+Two traps worth carrying:
+
+- **Never use a `-latest` alias** (`gemini-flash-latest`, `gemini-pro-latest`).
+  They move, and a run whose model changed underneath it is not reproducible
+  while looking identical in the artifacts.
+- **Cerebras and Groq both serve `gpt-oss-120b`.** The weight-digest dedup in
+  `run_all_models.py` only works for ollama, where the daemon reports a digest;
+  two hosted providers serving the same weights cannot be detected
+  automatically. Running both gives a PROVIDER comparison, not a second model -
+  useful for asking whether serving stack changes the numbers, but it must not
+  be presented as model diversity.
+
+Quota, measured rather than quoted: a brand-new Gemini key hit HTTP 429 after
+roughly 25-30 live calls, not the ~1,500/day the 2026-08-07 table records. One
+VMAG run is about 56 calls before caching, so a single free key does not reliably
+cover one run. `outputs/llm_cache/` plus `VMAG_LLM_OFFLINE=1` are load-bearing,
+not a convenience.
+
+### Measured availability, 2026-08-25 -- three of five are NOT usable
+
+The "Free hosted tiers, no credit card" table above was checked 2026-08-07 by
+reading provider documentation. Re-checked 2026-08-25 by holding a key and making
+a call, the picture is different. Trust this block over that table.
+
+| provider | measured state |
+|---|---|
+| Groq | **WORKS.** Main-set run valid on `openai/gpt-oss-120b`. Held-out pass hit a per-model org rate limit. Needs a `User-Agent` or Cloudflare answers 403 code 1010. |
+| Gemini | HTTP 429 after roughly 25-30 live calls, on three separate attempts. Not the ~1,500/day this file previously recorded. |
+| Cerebras | HTTP 402 `payment_required_error`, `param: quota`, on a brand-new key and on BOTH models it can see. Billing must be attached first; there is no usable free path. |
+| NVIDIA NIM | Reachable, but ~175 s per trivial completion in steady state (177.3 s / timeout at 240 s / 178.3 s / 173.3 s) and it failed to echo one word at temperature 0. Not viable for a 40-prompt run. |
+| OpenRouter | Not registered. This file's own note is ~50 requests/day until $10 of credit. |
+
+So the real-model column that can actually be filled today is **cli:sonnet on a
+subscription plus groq `openai/gpt-oss-120b`**. Plan for two, not five.

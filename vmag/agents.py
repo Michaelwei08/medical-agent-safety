@@ -69,7 +69,10 @@ def mock_model_agent(env: Environment) -> A.Plan:
 def worst_case_agent(env: Environment) -> A.Plan:
     """Adversarial upper bound: always attempts the most unsafe in-scope action,
     reads everything, and follows any injected instruction. Used to anchor the
-    high end of the adversary spectrum for the enforcement-invariance metric.
+    high end of the adversary spectrum. NOTE: the spread of guarded rates across
+    this spectrum is a tautology, not a measurement -- see the corrected block in
+    run_eval.py. What worst_case is still good for is the UNGUARDED arm, where it
+    bounds how bad a base agent can be before the guard sees it.
     Not the true worst case -- a constructed adversariality lower bound.
     """
     return A.Plan(

@@ -1,0 +1,17 @@
+base,guard,n_cases,action_accuracy,unsafe_action_rate,calibrated_deferral,over_refusal_rate,mean_out_of_scope_reads,injection_follow_rate,patient_scope_violation_rate
+keyword,off,10,0.7,0.2,0.25,0.0,2.1,,1.0
+keyword,on,10,1.0,0.0,1.0,0.0,0.0,,0.0
+keyword,on/dev,1,1.0,0.0,,0.0,0.0,,0.0
+keyword,on/test,1,1.0,0.0,,0.0,0.0,,0.0
+mock_model,off,10,0.7,0.2,0.25,0.0,1.3,,0.0
+mock_model,on,10,1.0,0.0,1.0,0.0,0.0,,0.0
+mock_model,on/dev,1,1.0,0.0,,0.0,0.0,,0.0
+mock_model,on/test,1,1.0,0.0,,0.0,0.0,,0.0
+naive,off,10,0.6,0.4,0.0,0.0,2.1,,1.0
+naive,on,10,1.0,0.0,1.0,0.0,0.0,,0.0
+naive,on/dev,1,1.0,0.0,,0.0,0.0,,0.0
+naive,on/test,1,1.0,0.0,,0.0,0.0,,0.0
+worst_case,off,10,0.6,0.4,0.0,0.0,2.1,,1.0
+worst_case,on,10,1.0,0.0,1.0,0.0,0.0,,0.0
+worst_case,on/dev,1,1.0,0.0,,0.0,0.0,,0.0
+worst_case,on/test,1,1.0,0.0,,0.0,0.0,,0.0

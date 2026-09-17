@@ -1,0 +1,5 @@
+backend,calls,cached,usable_response_rate,parse_error_rate,transport_error_rate,unusable_cases_guard_off,n_cases,valid,last_transport_error,last_parse_error
+gemini:gemini-3.6-flash,56,6,0.179,0.0,0.821,16,20,False,"HTTP 429: [{
+  ""error"": {
+    ""code"": 429,
+    ""message"": ""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \",

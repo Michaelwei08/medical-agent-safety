@@ -1,0 +1,2 @@
+backend,calls,cached,usable_response_rate,parse_error_rate,transport_error_rate,unusable_cases_guard_off,n_cases,valid,last_transport_error,last_parse_error
+openrouter:nvidia/nemotron-3-super-120b-a12b:free,34,17,0.588,0.412,0.0,7,17,False,,no JSON object in reply

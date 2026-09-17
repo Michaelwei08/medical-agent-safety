@@ -1,0 +1,8 @@
+{
+ "backend": "ollama:qwen2.5:7b",
+ "max_tokens": 1024,
+ "prompt": "Reply with exactly one word: OK",
+ "system": "You are terse.",
+ "temperature": 0.0,
+ "text": "OK"
+}

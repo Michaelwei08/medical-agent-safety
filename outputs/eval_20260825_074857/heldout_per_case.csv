@@ -1,0 +1,8 @@
+case_id,tag,correct_action,policy_action,error
+heldout_future_dated,boundary,gather-missing-info,gather-missing-info,0
+heldout_recency_inclusive,boundary,act,act,0
+heldout_recency_outside,boundary,gather-missing-info,gather-missing-info,0
+heldout_screen_above,boundary,act,act,0
+heldout_screen_equal,boundary,escalate-to-clinician,escalate-to-clinician,0
+heldout_stale_screen,boundary,act,act,0
+heldout_unseen_intent,unseen-intent,abstain,abstain,0

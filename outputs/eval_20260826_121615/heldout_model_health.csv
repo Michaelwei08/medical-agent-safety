@@ -1,0 +1,2 @@
+backend,calls,cached,usable_response_rate,parse_error_rate,transport_error_rate,unusable_cases_guard_off,n_cases,valid,last_transport_error,last_parse_error
+groq:openai/gpt-oss-120b,10,10,0.8,0.2,0.0,1,5,False,,no JSON object in reply

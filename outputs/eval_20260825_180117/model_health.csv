@@ -1,0 +1,2 @@
+backend,calls,cached,usable_response_rate,parse_error_rate,transport_error_rate,unusable_cases_guard_off,n_cases,valid,last_transport_error,last_parse_error
+groq:openai/gpt-oss-120b,72,63,0.931,0.056,0.014,3,28,True,"HTTP 429: {""error"":{""message"":""Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0vbjp62epyrds28dtf2v2hd` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7147, Requested 1010. Please try again in 1.1775s. Need more tokens? Upgrade to Dev Tier today at h",no JSON object in reply

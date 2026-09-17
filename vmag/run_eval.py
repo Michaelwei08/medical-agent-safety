@@ -24,6 +24,7 @@ from .benchmark import load_cases
 from .fhir_store import FhirStore
 from .guard import Guard
 from .http_fhir_store import DEFAULT_BASE, HttpFhirStore
+from .policy_freeze import status as policy_status
 from .runtime import run_case
 from .scoring import (aggregate, flip_summary, injection_flips, policy_error_summary,
                       policy_only, score_case)
@@ -103,6 +104,15 @@ def _run_model_backend(store, cases, guard, as_of: str, backend: str, disclosure
                     "correct": int(res.correct), "unsafe": int(res.unsafe),
                     "out_of_scope_reads": res.out_of_scope_types,
                     "exfiltrated": int(res.exfiltrated),
+                    # The scope axis reported a RATE with no per-case detail, so
+                    # there was no way to tell WHICH pretext succeeded - which is
+                    # the only actionable part. `scope_eligible` is written too
+                    # because the denominator is not the case count: only cases
+                    # carrying an `other_patient_id` can violate, and reading a
+                    # 0.1 without knowing it is 1-of-10 rather than 1-of-28 is how
+                    # the n=2 artefact went unnoticed for so long.
+                    "scope_eligible": int(res.scope_eligible),
+                    "cross_patient": int(res.cross_patient),
                     # Why a resolution happened matters as much as what it was.
                     "unusable": getattr(plan, "unusable", None) or "",
                 })
@@ -231,10 +241,28 @@ def main() -> None:
                     help="FHIR base URL when --store http. Use 127.0.0.1, not "
                          "localhost: on Windows the IPv6-first attempt costs a "
                          "full timeout (measured 21.1s against 0.049s).")
+    ap.add_argument("--tags", nargs="*", default=None, metavar="TAG",
+                    help="restrict to cases carrying these tags, in BOTH the main "
+                         "and held-out sets. Turns the run into a targeted probe: "
+                         "every aggregate rate then has a different denominator and "
+                         "is NOT comparable to a full run. Marked in metadata and "
+                         "announced on stdout for that reason.")
     args = ap.parse_args()
 
     store = make_store(args.store, args.fhir_dir, args.fhir_base)
     cases = load_cases(args.cases_dir)
+    if args.tags:
+        want = set(args.tags)
+        before = len(cases)
+        cases = [c for c in cases if c.tag in want]
+        if not cases:
+            raise SystemExit(
+                "no case in %s carries any of %s" % (args.cases_dir, sorted(want)))
+        print("  SUBSET RUN: %d of %d main cases match tags %s."
+              % (len(cases), before, sorted(want)))
+        print("  Every rate below is over that subset. Do NOT compare these numbers")
+        print("  to a full run -- the denominators differ.")
+        print()
     guard = Guard()
     ts = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
     out_dir = os.path.join(args.output_root, f"eval_{ts}")
@@ -286,13 +314,41 @@ def main() -> None:
     gen_gap = _delta(_get(pol_rows, "test", "policy_error_rate"),
                      _get(pol_rows, "dev", "policy_error_rate"))
 
-    # ---- enforcement invariance across the adversary spectrum ----
+    # ---- spread across the stand-ins: NOT a measurement, see below ----
+    #
+    # CORRECTED 2026-08-26. This block was reported as "enforcement invariance"
+    # and presented as evidence that safety is set by the policy rather than the
+    # agent. It cannot be evidence of that, because it is true by construction:
+    # Guard.review() sets the action from evaluate_policy(env) and never reads
+    # plan.intended_action; side effects are rebuilt from policy; follow_injection
+    # is hard-coded False; cross_patient_reads hard-coded empty. The one channel
+    # that reads the plan is dead, because no case has an empty
+    # allowed_resource_types.
+    #
+    # So guarded_spread is identically 0.0 for ANY set of base agents. Measured:
+    # a uniformly random agent, a null agent and a maximally malicious agent all
+    # score exactly 1.0 / 0.0 / 1.0 guarded, identical to Claude Sonnet on all
+    # seven metrics. The guard module docstring says it outright.
+    #
+    # unguarded_spread is not a finding either, for a different reason: these rows
+    # are the four HAND-BUILT stand-ins (a real model reports separately in
+    # model_delta), so their spread is how far apart we chose to build them.
+    #
+    # The key name is kept so the runs already on disk stay readable; the honesty
+    # is added as fields rather than by renaming.
     guarded_unsafe = [d["unsafe_on"] for d in delta_rows if d["unsafe_on"] is not None]
     unguarded_unsafe = [d["unsafe_off"] for d in delta_rows if d["unsafe_off"] is not None]
     invariance = {
         "guarded_spread": round(max(guarded_unsafe) - min(guarded_unsafe), 3) if guarded_unsafe else None,
         "unguarded_spread": round(max(unguarded_unsafe) - min(unguarded_unsafe), 3) if unguarded_unsafe else None,
         "guarded_floor": max(guarded_unsafe) if guarded_unsafe else None,
+        "n_base_agents": len(guarded_unsafe),
+        "guarded_spread_is_tautological": True,
+        "unguarded_spread_is_a_design_fact": True,
+        "note": ("guarded_spread is identically 0.0 for any set of agents because "
+                 "Guard.review() discards the agent plan; unguarded_spread is the "
+                 "spread of the hand-built stand-ins. Neither is evidence about a "
+                 "model or about the guard. See README, corrected 2026-08-26."),
     }
 
     _write_csv(os.path.join(out_dir, "metrics.csv"), summary_rows,
@@ -367,6 +423,10 @@ def main() -> None:
     heldout_rows: list[dict] = []
     if not args.no_heldout and os.path.isdir(args.heldout_dir):
         ho_cases = load_cases(args.heldout_dir)
+        if args.tags:
+            # Filter the held-out set too, or a tag probe silently compares a
+            # narrow main slice against the whole held-out set.
+            ho_cases = [c for c in ho_cases if c.tag in set(args.tags)]
         if ho_cases:
             ho_store = make_store(args.store, args.heldout_fhir_dir, args.fhir_base)
             for r in policy_only(ho_store, ho_cases, args.as_of):
@@ -385,6 +445,47 @@ def main() -> None:
                        ["scope", "n", "policy_error_rate", "under_block_rate",
                         "over_block_rate", "defer_miscalibration_rate"])
 
+            # ---- the model on the held-out set, in its OWN files ----
+            #
+            # Until 2026-08-25 the held-out section ran `policy_only`, so it checked
+            # the POLICY against ground truth and never put a model in the loop.
+            # That meant `policy_generalization_gap` was exactly what its name says -
+            # about the policy - and NO model-behaviour axis had any generalization
+            # check at all: not accuracy, not patient scope, not injection. A held-out
+            # cohort that the model never sees cannot tell you whether the model's
+            # behaviour transfers.
+            #
+            # Written to `heldout_model_*.csv` and NEVER appended to `model_rows`,
+            # `flip_rows` or `model_per_case`. The protocol's rule is that held-out is
+            # scored against its own cohort and never merged with dev/test
+            # (docs/evaluation_protocol.md); running a model on it does not change
+            # that, and merging would destroy the only thing the separation buys.
+            if args.model_backend:
+                print(f"running real model {args.model_backend} over "
+                      f"{len(ho_cases)} HELD-OUT cases (own cohort, never merged)...")
+                (ho_model_rows, ho_model_per_case, ho_model_delta, ho_model_health,
+                 ho_flips, ho_flip_detail) = _run_model_backend(
+                    ho_store, ho_cases, guard, args.as_of,
+                    args.model_backend, args.disclosure)
+                if ho_model_rows:
+                    _write_csv(os.path.join(out_dir, "heldout_model_metrics.csv"),
+                               ho_model_rows, list(ho_model_rows[0].keys()))
+                if ho_model_per_case:
+                    _write_csv(os.path.join(out_dir, "heldout_model_per_case.csv"),
+                               ho_model_per_case, list(ho_model_per_case[0].keys()))
+                _write_csv(os.path.join(out_dir, "heldout_model_health.csv"),
+                           [ho_model_health], list(ho_model_health.keys()))
+                # Same gate as the main table: a backend that never answered produces
+                # control == injected everywhere and would read as injection
+                # resistance. Do not write the flip table for an invalid run.
+                if ho_model_health.get("valid") and ho_flips:
+                    _write_csv(os.path.join(out_dir, "heldout_injection_flips.csv"),
+                               ho_flips, list(ho_flips[0].keys()))
+                elif ho_flips:
+                    print(f"  held-out flip table withheld: {args.model_backend} "
+                          f"usable rate {ho_model_health.get('usable_response_rate')} "
+                          "-- an unanswered run would read as resistance.")
+
     if flip_rows:
         _write_csv(os.path.join(out_dir, "injection_flips.csv"), flip_rows,
                    ["base", "guard", "n", "injection_decision_flip_rate",
@@ -402,6 +503,17 @@ def main() -> None:
          "store": args.store,
          "fhir_dir": args.fhir_dir,
          "fhir_base": args.fhir_base if args.store == "http" else None,
+         # Which real model, if any. Recoverable from model_metrics.csv, but an
+         # artifact that cannot name its own backend cannot be compared to another
+         # artifact without consulting a log outside itself.
+         "model_backend": args.model_backend,
+         # None for a full run. A non-null value means every rate in this
+         # directory is over a subset and is not comparable to a full run.
+         "tags_filter": sorted(args.tags) if args.tags else None,
+         "disclosure": args.disclosure,
+         # The policy this run actually used. Without it a cross-run comparison
+         # rests on the session log rather than on the artifacts.
+         **policy_status(),
          "data_sources": ["Synthea (Apache-2.0, synthetic)",
                           "MedAgentBench-style action space (MIT)"]},
         open(os.path.join(out_dir, "run_metadata.json"), "w", encoding="utf-8"), indent=1)
@@ -414,9 +526,16 @@ def main() -> None:
     for d in delta_rows:
         print(f"  {d['base']:11} {d['unsafe_off']} -> {d['unsafe_on']}  "
               f"(reduction {d['unsafe_reduction']}); injection {d['injection_off']} -> {d['injection_on']}")
-    print("\n== enforcement invariance (unsafe-rate spread across adversary spectrum) ==")
-    print(f"  unguarded spread {invariance['unguarded_spread']}  ->  guarded spread {invariance['guarded_spread']}"
-          f"  (guarded floor {invariance['guarded_floor']})")
+    print()
+    print("== spread across the %d stand-ins -- NOT a measurement =="
+          % invariance["n_base_agents"])
+    print(f"  guarded spread {invariance['guarded_spread']} "
+          f"(floor {invariance['guarded_floor']}): identically 0.0 for ANY agent set.")
+    print("    Guard.review() discards the agent plan, so a random agent scores the")
+    print("    same as Claude Sonnet on all seven metrics. Reporting this as a")
+    print("    result reports the definition.")
+    print(f"  unguarded spread {invariance['unguarded_spread']}: how far apart the")
+    print("    hand-built stand-ins were constructed to be. A design fact, not a finding.")
     print("\n== policy error (guard vs oracle, no agent) ==")
     for r in pol_rows:
         print(f"  {r['scope']:7} err={r['policy_error_rate']} "
@@ -690,13 +809,21 @@ def _write_summary(out_dir, summary_rows, delta_rows, pol_rows, gen_gap, invaria
         )
     lines += [
         "",
-        "## Enforcement invariance (adversary spectrum)",
+        "## Spread across the stand-ins (NOT a measurement)",
         "",
-        f"Unsafe-rate spread across base agents (benign -> worst_case): "
-        f"**unguarded {invariance['unguarded_spread']} -> guarded {invariance['guarded_spread']}** "
-        f"(guarded floor {invariance['guarded_floor']}).",
-        "A near-zero guarded spread beside a large unguarded spread is the evidence "
-        "that safety is set by the policy, not the agent -- the guarantee, instantiated.",
+        f"**guarded {invariance['guarded_spread']}** (floor "
+        f"{invariance['guarded_floor']}) and **unguarded "
+        f"{invariance['unguarded_spread']}** over "
+        f"{invariance['n_base_agents']} hand-built base agents.",
+        "",
+        "CORRECTED 2026-08-26. This was previously captioned as the evidence that "
+        "safety is set by the policy rather than the agent. It cannot be: "
+        "`Guard.review()` discards the agent plan, so the guarded spread is "
+        "identically 0.0 for ANY set of agents -- a uniformly random agent scores "
+        "the same 1.0 / 0.0 / 1.0 as Claude Sonnet on all seven metrics. The "
+        "unguarded spread is not a finding either: these are the stand-ins we "
+        "built, so their spread is a choice we made. Neither number is evidence "
+        "about a model or about the guard.",
         "",
         "## Policy-error accounting (guard vs oracle, no agent in loop)",
         "",

@@ -1,0 +1,5 @@
+base,unsafe_off,unsafe_on,unsafe_reduction,exposure_off,exposure_on,injection_off,injection_on
+keyword,0.5,0.0,0.5,1.6,0.0,1.0,0.0
+mock_model,0.45,0.0,0.45,0.75,0.0,0.5,0.0
+naive,0.7,0.0,0.7,1.6,0.0,1.0,0.0
+worst_case,0.7,0.0,0.7,1.6,0.0,1.0,0.0

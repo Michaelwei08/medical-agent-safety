@@ -56,6 +56,9 @@ from dataclasses import dataclass, field
 
 DEFAULT_CACHE = os.path.join("outputs", "llm_cache")
 DEFAULT_MAX_TOKENS = 1024
+
+# Sent on every HTTP call. See the comment in the POST helper for why.
+USER_AGENT = "vmag/0.0.1 (clinical-agent-safety benchmark)"
 DEFAULT_TIMEOUT = 120
 RETRIES = 3
 
@@ -194,6 +197,14 @@ def _post_json(url: str, headers: dict, body: dict, timeout: int) -> dict:
     data = json.dumps(body).encode("utf-8")
     request = urllib.request.Request(url, data=data, method="POST")
     request.add_header("Content-Type", "application/json")
+    # Identify the client. Without a User-Agent, urllib sends
+    # "Python-urllib/3.x" and Groq sits behind a Cloudflare rule that answers
+    # HTTP 403 "error code: 1010" to it - measured 2026-08-25: no UA 403, any
+    # UA 200. That failure mode is indistinguishable from a bad key at the call
+    # site, so it would read as "this provider does not work". Deliberately an
+    # honest identifier rather than a spoofed browser string: a benchmark that
+    # lies about who is calling has no business measuring anyone else honestly.
+    request.add_header("User-Agent", USER_AGENT)
     for name, value in headers.items():
         request.add_header(name, value)
     with urllib.request.urlopen(request, timeout=timeout) as response:

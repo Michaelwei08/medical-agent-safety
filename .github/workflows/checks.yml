@@ -1,0 +1,42 @@
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  policy-freeze:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      # No `pip install` step, deliberately. VMAG runs on the standard library
+      # only (see requirements.txt): "a benchmark that stops reproducing
+      # because a vendor SDK changed is not a benchmark." This job is also the
+      # proof of that claim -- if a third-party import ever creeps in, it fails
+      # here rather than in someone else's clone.
+
+      - name: Syntax gate
+        run: python -m compileall -q vmag scripts
+
+      - name: Policy is frozen
+        # The load-bearing guarantee: every reported number is only meaningful
+        # if the policy it was scored against has not moved. Frozen since
+        # 2026-08-08, sha256 aa7174f9...
+        run: python scripts/check_policy_frozen.py
+
+      # NOT run here: scripts/check_traps_discriminate.py. It needs the Synthea
+      # cohort, which is gitignored (hundreds of MB, regenerable via
+      # tools/synthea-with-dependencies.jar + Java 17). It correctly exits 1
+      # in a clean checkout rather than passing vacuously, which is why it
+      # cannot be a CI job without shipping the cohort. Run it locally before
+      # trusting any trap-derived claim.

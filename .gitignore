@@ -15,3 +15,11 @@ third_party/
 # It is now TRACKED on purpose. It is only 973 KB over 237 files, and for VMAG
 # the eval outputs ARE the measurement - excluding them would mean the backup
 # does not hold the results. Revert this line if outputs/ ever gets large.
+
+# API keys pasted in by hand. Never committed - the free-tier keys are still
+# credentials, and a leaked one is someone else's quota and someone else's bill.
+# Deliberately NOT named after any provider: an ignore rule that enumerates
+# which services are in use is itself a disclosure (learned 2026-08-24).
+.env
+.env.local
+.env.*.local
